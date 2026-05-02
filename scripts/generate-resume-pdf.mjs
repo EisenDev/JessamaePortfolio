@@ -52,7 +52,7 @@ async function main() {
   const logStream = fs.createWriteStream(logFile, { flags: "w" });
   const server = spawn(
     "npm",
-    ["run", "start", "--", "--hostname", "127.0.0.1", "--port", port],
+    ["run", "dev", "--", "--hostname", "127.0.0.1", "--port", port],
     {
       cwd: rootDir,
       stdio: ["ignore", "pipe", "pipe"],
@@ -76,7 +76,13 @@ async function main() {
 
     const page = await browser.newPage();
     await page.goto(url, { waitUntil: "networkidle0" });
-    await page.emulateMediaType("print");
+    await page.waitForFunction(
+      () => {
+        const bodyFont = getComputedStyle(document.body).fontFamily;
+        return bodyFont && !bodyFont.includes("Times New Roman");
+      },
+      { timeout: 30000 },
+    );
     await page.evaluate(() => window.scrollTo(0, 0));
 
     const screenshot = await page.screenshot({
