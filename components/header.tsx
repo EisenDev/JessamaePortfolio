@@ -20,7 +20,7 @@ export function Header({
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-4 z-50 px-4 sm:px-6 lg:px-8">
+    <header className="site-header fixed inset-x-0 top-4 z-50 px-4 sm:px-6 lg:px-8">
       <div className="mx-auto flex max-w-6xl items-center justify-between rounded-full border border-white/80 bg-white/85 px-4 py-3 shadow-[0_18px_45px_rgba(139,148,178,0.18)] backdrop-blur">
         <Link
           href={brandHref}

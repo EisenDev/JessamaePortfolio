@@ -39,7 +39,7 @@ To regenerate the downloadable resume PDF from the actual styled `/resume` page:
 
 ```bash
 npm run build
-./scripts/generate-resume-pdf.sh
+node ./scripts/generate-resume-pdf.mjs
 ```
 
 If you prefer to export manually from the browser:

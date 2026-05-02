@@ -42,7 +42,7 @@ h3 {
 
 @page {
   size: A4;
-  margin: 12mm;
+  margin: 0;
 }
 
 @media print {
@@ -51,7 +51,7 @@ h3 {
     background: #ffffff;
   }
 
-  header,
+  .site-header,
   .resume-page-toolbar {
     display: none !important;
   }
@@ -86,4 +86,25 @@ h3 {
     border-radius: 0;
     padding: 0;
   }
+
+  .resume-pdf-page,
+  .resume-pdf-canvas {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.resume-pdf-page {
+  min-height: 100vh;
+  padding: 0;
+}
+
+.resume-pdf-root {
+  margin: 0;
+  padding: 8mm 10mm;
+}
+
+.resume-pdf-shell {
+  width: 100%;
+  background: #ffffff;
 }

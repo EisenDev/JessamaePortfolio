@@ -33,34 +33,68 @@ const skillGroups = [
 function ResumeSection({
   title,
   children,
+  pdf = false,
 }: {
   title: string;
   children: React.ReactNode;
+  pdf?: boolean;
 }) {
   return (
     <section>
-      <div className="flex items-center gap-4">
-        <h3 className="text-sm font-semibold uppercase tracking-[0.26em] text-[var(--color-resume-accent)]">
+      <div className={`flex items-center ${pdf ? "gap-3" : "gap-4"}`}>
+        <h3
+          className={`font-semibold uppercase text-[var(--color-resume-accent)] ${
+            pdf ? "text-[11px] tracking-[0.22em]" : "text-sm tracking-[0.26em]"
+          }`}
+        >
           {title}
         </h3>
         <div className="h-px flex-1 bg-[linear-gradient(90deg,var(--color-resume-accent),rgba(171,143,214,0.12))]" />
       </div>
-      <div className="mt-4">{children}</div>
+      <div className={pdf ? "mt-2.5" : "mt-4"}>{children}</div>
     </section>
   );
 }
 
-export function ResumeDocument({ compact = false }: { compact?: boolean }) {
+export function ResumeDocument({
+  compact = false,
+  pdf = false,
+}: {
+  compact?: boolean;
+  pdf?: boolean;
+}) {
   return (
-    <article className="resume-document mx-auto w-full max-w-4xl rounded-[1.75rem] border border-[rgba(171,143,214,0.2)] bg-white px-5 py-8 text-slate-700 shadow-[0_30px_80px_rgba(128,107,178,0.1)] sm:px-10 sm:py-10">
-      <header className="border-b border-[rgba(171,143,214,0.18)] pb-6 text-center">
-        <h2 className="text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl">
+    <article
+      className={`resume-document mx-auto w-full max-w-4xl border border-[rgba(171,143,214,0.2)] bg-white text-slate-700 shadow-[0_30px_80px_rgba(128,107,178,0.1)] ${
+        pdf
+          ? "rounded-none px-6 py-5"
+          : "rounded-[1.75rem] px-5 py-8 sm:px-10 sm:py-10"
+      }`}
+    >
+      <header
+        className={`border-b border-[rgba(171,143,214,0.18)] text-center ${
+          pdf ? "pb-3" : "pb-6"
+        }`}
+      >
+        <h2
+          className={`font-semibold tracking-tight text-slate-950 ${
+            pdf ? "text-[30px]" : "text-4xl sm:text-5xl"
+          }`}
+        >
           {fullName}
         </h2>
-        <p className="mt-2 text-base font-medium text-[var(--color-resume-accent)]">
+        <p
+          className={`font-medium text-[var(--color-resume-accent)] ${
+            pdf ? "mt-1 text-[13px]" : "mt-2 text-base"
+          }`}
+        >
           {roleTitle}
         </p>
-        <div className="mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-slate-500">
+        <div
+          className={`flex flex-wrap items-center justify-center text-slate-500 ${
+            pdf ? "mt-2 gap-x-3 gap-y-1 text-[11px]" : "mt-4 gap-x-4 gap-y-2 text-sm"
+          }`}
+        >
           <span>{shortName}</span>
           <span className="hidden sm:inline">•</span>
           <a
@@ -74,32 +108,62 @@ export function ResumeDocument({ compact = false }: { compact?: boolean }) {
         </div>
       </header>
 
-      <div className="mt-8 space-y-8">
-        <ResumeSection title="Summary">
-          <ul className="space-y-3 text-sm leading-7 text-slate-600 sm:text-base">
+      <div className={`${pdf ? "mt-3 space-y-3.5" : "mt-8 space-y-8"}`}>
+        <ResumeSection title="Summary" pdf={pdf}>
+          <ul
+            className={`text-slate-600 ${
+              pdf ? "space-y-2 text-[13px] leading-6" : "space-y-3 text-sm leading-7 sm:text-base"
+            }`}
+          >
             {summaryPoints.map((point) => (
               <li key={point} className="flex gap-3">
-                <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[var(--color-resume-accent)]" />
+                <span
+                  className={`shrink-0 rounded-full bg-[var(--color-resume-accent)] ${
+                    pdf ? "mt-2 h-1.5 w-1.5" : "mt-2 h-2 w-2"
+                  }`}
+                />
                 <span>{point}</span>
               </li>
             ))}
           </ul>
         </ResumeSection>
 
-        <ResumeSection title="Work Experience">
-          <div className="rounded-[1.25rem] bg-[linear-gradient(180deg,#fcfbff_0%,#ffffff_100%)] p-5">
+        <ResumeSection title="Work Experience" pdf={pdf}>
+          <div
+            className={`rounded-[1.25rem] bg-[linear-gradient(180deg,#fcfbff_0%,#ffffff_100%)] ${
+              pdf ? "p-4" : "p-5"
+            }`}
+          >
             <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
               <div>
-                <h4 className="text-xl font-semibold text-slate-950">
+                <h4
+                  className={`font-semibold text-slate-950 ${
+                    pdf ? "text-lg" : "text-xl"
+                  }`}
+                >
                   Student Assistant
                 </h4>
-                <p className="text-sm font-medium text-[var(--color-resume-accent)]">
+                <p
+                  className={`font-medium text-[var(--color-resume-accent)] ${
+                    pdf ? "text-[12px]" : "text-sm"
+                  }`}
+                >
                   Cor Jesu College - Assessment Office
                 </p>
               </div>
-              <p className="text-sm font-medium text-slate-500">4 years</p>
+              <p
+                className={`font-medium text-slate-500 ${
+                  pdf ? "text-[12px]" : "text-sm"
+                }`}
+              >
+                4 years
+              </p>
             </div>
-            <ul className="mt-4 space-y-3 text-sm leading-7 text-slate-600 sm:text-base">
+            <ul
+              className={`text-slate-600 ${
+                pdf ? "mt-3 space-y-2 text-[13px] leading-6" : "mt-4 space-y-3 text-sm leading-7 sm:text-base"
+              }`}
+            >
               <li>Supported assessment office operations and daily document processing.</li>
               <li>Assisted with student record handling and confidential office tasks.</li>
               <li>Helped with cashiering-related workflows and basic transaction support.</li>
@@ -108,17 +172,29 @@ export function ResumeDocument({ compact = false }: { compact?: boolean }) {
           </div>
         </ResumeSection>
 
-        <ResumeSection title="Skills">
-          <div className={`grid gap-5 ${compact ? "lg:grid-cols-2" : "md:grid-cols-2"}`}>
+        <ResumeSection title="Skills" pdf={pdf}>
+          <div
+            className={`grid ${pdf ? "gap-3 md:grid-cols-2" : `gap-5 ${compact ? "lg:grid-cols-2" : "md:grid-cols-2"}`}`}
+          >
             {skillGroups.map((group) => (
               <div
                 key={group.title}
-                className="rounded-[1.25rem] bg-[linear-gradient(180deg,#fcfbff_0%,#ffffff_100%)] p-5"
+                className={`rounded-[1.25rem] bg-[linear-gradient(180deg,#fcfbff_0%,#ffffff_100%)] ${
+                  pdf ? "p-4" : "p-5"
+                }`}
               >
-                <h4 className="text-base font-semibold text-slate-900">
+                <h4
+                  className={`font-semibold text-slate-900 ${
+                    pdf ? "text-[14px]" : "text-base"
+                  }`}
+                >
                   {group.title}
                 </h4>
-                <ul className="mt-3 space-y-2 text-sm leading-7 text-slate-600">
+                <ul
+                  className={`text-slate-600 ${
+                    pdf ? "mt-2 space-y-1 text-[12px] leading-5" : "mt-3 space-y-2 text-sm leading-7"
+                  }`}
+                >
                   {group.items.map((item) => (
                     <li key={item}>{item}</li>
                   ))}
@@ -128,15 +204,31 @@ export function ResumeDocument({ compact = false }: { compact?: boolean }) {
           </div>
         </ResumeSection>
 
-        <ResumeSection title="Education">
-          <div className="rounded-[1.25rem] bg-[linear-gradient(180deg,#fcfbff_0%,#ffffff_100%)] p-5">
-            <h4 className="text-xl font-semibold text-slate-950">
+        <ResumeSection title="Education" pdf={pdf}>
+          <div
+            className={`rounded-[1.25rem] bg-[linear-gradient(180deg,#fcfbff_0%,#ffffff_100%)] ${
+              pdf ? "p-4" : "p-5"
+            }`}
+          >
+            <h4
+              className={`font-semibold text-slate-950 ${
+                pdf ? "text-lg" : "text-xl"
+              }`}
+            >
               Bachelor of Science in Business Administration
             </h4>
-            <p className="mt-1 text-sm font-medium text-[var(--color-resume-accent)]">
+            <p
+              className={`font-medium text-[var(--color-resume-accent)] ${
+                pdf ? "mt-1 text-[12px]" : "mt-1 text-sm"
+              }`}
+            >
               Major in Financial Management
             </p>
-            <p className="mt-3 text-sm leading-7 text-slate-600 sm:text-base">
+            <p
+              className={`text-slate-600 ${
+                pdf ? "mt-2 text-[13px] leading-6" : "mt-3 text-sm leading-7 sm:text-base"
+              }`}
+            >
               Fresh graduate with a foundation in financial management and
               practical office experience developed through long-term student
               assistant work.
