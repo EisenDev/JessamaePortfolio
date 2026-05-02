@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fffdfb;
+  --foreground: #243042;
+  --color-accent: #e69ab3;
+  --color-accent-strong: #c86b90;
+  --color-soft: #fff1f6;
+  --color-soft-blue: #eef5ff;
+  --color-border: #f1dfdf;
+  --color-gold: #e9c27b;
+  --color-resume-accent: #8f6bc7;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-manrope);
+  --font-serif: var(--font-cormorant);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-manrope), sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-cormorant), serif;
+}
+
+::selection {
+  background: #f7d4df;
+  color: #4a2a3a;
+}
+
+@page {
+  size: A4;
+  margin: 12mm;
+}
+
+@media print {
+  html,
+  body {
+    background: #ffffff;
+  }
+
+  header,
+  .resume-page-toolbar {
+    display: none !important;
+  }
+
+  .resume-page-shell {
+    max-width: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .resume-page-frame,
+  .resume-print-stage,
+  .resume-document {
+    border: 0;
+    box-shadow: none;
+    background: #ffffff;
+  }
+
+  .resume-page-frame {
+    padding: 0;
+  }
+
+  .resume-print-stage {
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+  }
+
+  .resume-document {
+    max-width: none;
+    border-radius: 0;
+    padding: 0;
+  }
+}
