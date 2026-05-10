@@ -9,7 +9,6 @@ The main audience is HR personnel, recruiters, and employers who need a fast, ea
 ## Confirmed Background
 - Full name: Jessa Mae R. Condrillon
 - Education: Bachelor of Science in Business Administration major in Financial Management
-- Status: Fresh graduate
 - Experience: 4 years as a Student Assistant
 - Workplace: Cor Jesu College, Assessment Office
 - Experience areas:

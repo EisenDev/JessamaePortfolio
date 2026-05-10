@@ -1,7 +1,7 @@
 export const fullName = "Jessa Mae R. Condrillon";
 export const shortName = "Jessa Mae";
 export const roleTitle =
-  "Business Administration Graduate | Financial Management | E-commerce Marketing";
+  "Business Administration Professional | Financial Management | E-commerce Marketing";
 
 export const contactLinks = {
   onlineJobs:
@@ -16,7 +16,7 @@ export const heroHighlights = [
 ];
 
 export const aboutParagraphs = [
-  "I am a fresh graduate in Business Administration major in Financial Management with practical experience developed through four years of service as a Student Assistant at Cor Jesu College.",
+  "I am a Business Administration professional major in Financial Management with practical experience developed through four years of service as a Student Assistant at Cor Jesu College.",
   "My background includes assessment office support, student record assistance, document processing, cashiering support, payroll-related exposure, and e-commerce marketing support.",
 ];
 

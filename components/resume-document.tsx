@@ -1,7 +1,7 @@
 import { contactLinks, fullName, roleTitle, shortName } from "@/data/portfolio";
 
 const summaryPoints = [
-  "Fresh graduate in Business Administration major in Financial Management with four years of hands-on student assistant experience.",
+  "Business Administration professional major in Financial Management with four years of hands-on student assistant experience.",
   "Experienced in assessment office support, document processing, student record assistance, cashiering support, payroll-related exposure, and e-commerce marketing.",
   "Known for accuracy, professionalism, confidentiality, time management, and dependable office coordination.",
 ];
@@ -229,9 +229,9 @@ export function ResumeDocument({
                 pdf ? "mt-2 text-[13px] leading-6" : "mt-3 text-sm leading-7 sm:text-base"
               }`}
             >
-              Fresh graduate with a foundation in financial management and
-              practical office experience developed through long-term student
-              assistant work.
+              Degree in Business Administration with a major in Financial
+              Management and four years of practical office experience developed
+              through long-term student assistant work.
             </p>
           </div>
         </ResumeSection>

@@ -1,7 +1,7 @@
 # AGENTS.md
 
 ## Project Purpose
-This project is a professional portfolio website for Jessa Mae R. Condrillon, a BSBA Financial Management fresh graduate applying for work.
+This project is a professional portfolio website for Jessa Mae R. Condrillon, a Business Administration Professional major in Financial Management applying for work.
 
 ## Do Not Hallucinate
 - Do not add missing personal information.
@@ -12,7 +12,6 @@ This project is a professional portfolio website for Jessa Mae R. Condrillon, a 
 - Full name: Jessa Mae R. Condrillon
 - Short display name allowed where useful: Jessa Mae
 - Education: Bachelor of Science in Business Administration major in Financial Management
-- Status: Fresh graduate
 - Experience: 4 years as Student Assistant
 - Workplace: Cor Jesu College, Assessment Office
 - Experience areas: assessment office support, student record assistance, document processing, administrative support, cashiering support, payroll-related exposure, office communication, confidential record handling, time management, accuracy and attention to detail

@@ -32,12 +32,12 @@ export function CvDocument({ compact = false }: { compact?: boolean }) {
             Profile
           </h3>
           <p className="mt-4 text-base leading-8 text-slate-600">
-            I am a fresh graduate with a Bachelor of Science in Business
-            Administration major in Financial Management. My background includes
-            four years of student assistant experience in the Assessment Office
-            of Cor Jesu College, where I developed practical strengths in office
-            support, document handling, student assistance, finance-related
-            workflows, and e-commerce marketing.
+            I am a Business Administration professional with a major in
+            Financial Management. My background includes four years of student
+            assistant experience in the Assessment Office of Cor Jesu College,
+            where I developed practical strengths in office support, document
+            handling, student assistance, finance-related workflows, and
+            e-commerce marketing.
           </p>
         </section>
 
@@ -53,7 +53,7 @@ export function CvDocument({ compact = false }: { compact?: boolean }) {
               Major in Financial Management
             </p>
             <p className="mt-4 text-sm leading-7 text-slate-600">
-              Status: Fresh graduate
+              Cor Jesu College
             </p>
           </div>
 

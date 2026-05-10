@@ -14,10 +14,11 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Jessa Mae R. Condrillon | Portfolio",
+  title: "Jessa Mae R. Condrillon | Professional Portfolio",
   description:
-    "Professional portfolio for Jessa Mae R. Condrillon, a BSBA Financial Management fresh graduate with student assistant, assessment office, cashiering, and payroll-related experience.",
+    "Professional portfolio for Jessa Mae R. Condrillon, a Business Administration professional major in Financial Management with student assistant, assessment office, cashiering, and payroll-related experience.",
 };
+
 
 export default function RootLayout({
   children,

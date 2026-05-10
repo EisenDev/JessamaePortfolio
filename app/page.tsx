@@ -69,9 +69,10 @@ export default function Home() {
                   {fullName}
                 </p>
                 <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
-                  I am a fresh graduate with 4 years of hands-on experience in
-                  assessment office support, administrative work, cashiering
-                  support, payroll-related tasks, and e-commerce marketing.
+                  I am a Business Administration professional with 4 years of
+                  hands-on experience in assessment office support,
+                  administrative work, cashiering support, payroll-related
+                  tasks, and e-commerce marketing.
                 </h1>
                 <p className="max-w-2xl text-lg leading-8 text-slate-600">
                   My goal is to bring dependable office support, financial
@@ -146,7 +147,7 @@ export default function Home() {
             <SectionHeading
               eyebrow="About"
               title="I bring practical office experience together with a strong academic foundation in financial management"
-              description="I completed my Bachelor of Science in Business Administration major in Financial Management while building hands-on experience through student assistant work."
+              description="I hold a Bachelor of Science in Business Administration major in Financial Management, with extensive hands-on experience built through four years of student assistant work."
             />
             <div className="mt-8 grid gap-6 lg:grid-cols-2">
               {aboutParagraphs.map((paragraph) => (
