@@ -2,7 +2,7 @@ import { contactLinks, fullName, roleTitle, shortName } from "@/data/portfolio";
 
 const summaryPoints = [
   "Fresh graduate in Business Administration major in Financial Management with four years of hands-on student assistant experience.",
-  "Experienced in assessment office support, document processing, student record assistance, cashiering support, and payroll-related exposure.",
+  "Experienced in assessment office support, document processing, student record assistance, cashiering support, payroll-related exposure, and e-commerce marketing.",
   "Known for accuracy, professionalism, confidentiality, time management, and dependable office coordination.",
 ];
 
@@ -15,7 +15,7 @@ const skillGroups = [
       "Administrative support",
       "Cashiering support",
       "Payroll-related exposure",
-      "Office communication",
+      "E-commerce marketing",
     ],
   },
   {

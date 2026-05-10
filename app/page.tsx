@@ -71,7 +71,7 @@ export default function Home() {
                 <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
                   I am a fresh graduate with 4 years of hands-on experience in
                   assessment office support, administrative work, cashiering
-                  support, and payroll-related tasks.
+                  support, payroll-related tasks, and e-commerce marketing.
                 </h1>
                 <p className="max-w-2xl text-lg leading-8 text-slate-600">
                   My goal is to bring dependable office support, financial
@@ -189,9 +189,9 @@ export default function Home() {
 
             <article className="rounded-[2rem] border border-white/70 bg-white/90 p-8 shadow-[0_24px_60px_rgba(127,145,181,0.12)]">
               <SectionHeading
-                eyebrow="Finance Support"
-                title="Cashiering and payroll-related exposure"
-                description="My background also includes support work connected to cashiering processes and payroll-related tasks."
+                eyebrow="Finance & Marketing"
+                title="Cashiering, payroll, and e-commerce marketing"
+                description="My background also includes support work connected to cashiering, payroll, and e-commerce marketing initiatives."
               />
               <div className="mt-6 space-y-4 text-base leading-8 text-slate-600">
                 <p>
@@ -200,7 +200,7 @@ export default function Home() {
                   accuracy.
                 </p>
                 <p>
-                  I also gained payroll-related exposure through administrative
+                  I gained payroll-related exposure and e-commerce marketing knowledge through administrative
                   support responsibilities that involved confidentiality,
                   timeliness, and attention to detail.
                 </p>
@@ -298,7 +298,7 @@ export default function Home() {
             </div>
             <p className="mt-8 max-w-3xl text-base leading-8 text-slate-600">
               I am open to entry-level opportunities in administrative support,
-              office operations, cashiering-related work, and finance-related
+              office operations, cashiering-related work, e-commerce marketing, and finance-related
               roles where I can contribute with professionalism, accuracy, and a
               strong willingness to learn.
             </p>
