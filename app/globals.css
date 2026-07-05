@@ -1,110 +1,49 @@
 @import "tailwindcss";
 
+@theme {
+  --color-background: #F8F5EF;
+  --color-foreground: #3E4339;
+  --color-gold: #B39B78;
+  --color-gold-light: #DCD0C0;
+  --color-dark: #1B1E18;
+  --color-btn: #4D5246;
+
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+  --font-signature: var(--font-alex);
+}
+
 :root {
-  --background: #fffdfb;
-  --foreground: #243042;
-  --color-accent: #e69ab3;
-  --color-accent-strong: #c86b90;
-  --color-soft: #fff1f6;
-  --color-soft-blue: #eef5ff;
-  --color-border: #f1dfdf;
-  --color-gold: #e9c27b;
-  --color-resume-accent: #8f6bc7;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-manrope);
-  --font-serif: var(--font-cormorant);
-}
-
-html {
-  scroll-behavior: smooth;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-manrope), sans-serif;
+  font-family: var(--font-sans), sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  overflow-x: hidden;
 }
 
-h1,
-h2,
-h3 {
-  font-family: var(--font-cormorant), serif;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif), serif;
 }
 
-::selection {
-  background: #f7d4df;
-  color: #4a2a3a;
+.font-signature {
+  font-family: var(--font-signature), cursive;
 }
 
-@page {
-  size: A4;
-  margin: 0;
+.signature {
+  font-family: var(--font-signature), cursive;
 }
 
-@media print {
-  html,
-  body {
-    background: #ffffff;
-  }
-
-  .site-header,
-  .resume-page-toolbar {
-    display: none !important;
-  }
-
-  .resume-page-shell {
-    max-width: none;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-
-  .resume-page-frame,
-  .resume-print-stage,
-  .resume-document {
-    border: 0;
-    box-shadow: none;
-    background: #ffffff;
-  }
-
-  .resume-page-frame {
-    padding: 0;
-  }
-
-  .resume-print-stage {
-    margin: 0;
-    padding: 0;
-    overflow: visible;
-  }
-
-  .resume-document {
-    max-width: none;
-    border-radius: 0;
-    padding: 0;
-  }
-
-  .resume-pdf-page,
-  .resume-pdf-canvas {
-    margin: 0;
-    padding: 0;
-  }
+/* Ensure icons have colors */
+svg.text-gold {
+  color: var(--color-gold);
+}
+svg.fill-current {
+  fill: currentColor;
 }
 
-.resume-pdf-page {
-  min-height: 100vh;
-  padding: 0;
-}
-
-.resume-pdf-root {
-  margin: 0;
-  padding: 8mm 10mm;
-}
-
-.resume-pdf-shell {
-  width: 100%;
-  background: #ffffff;
-}
+/* Botanical shapes using absolute positioning in components is better, 
+   but let's keep some subtle background gradients here if needed */

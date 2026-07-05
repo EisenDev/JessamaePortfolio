@@ -1,24 +1,29 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Manrope } from "next/font/google";
+import { Playfair_Display, Inter, Great_Vibes } from "next/font/google";
 import "./globals.css";
 
-const manrope = Manrope({
-  variable: "--font-manrope",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+});
+
+const greatVibes = Great_Vibes({
+  variable: "--font-alex", // reusing the CSS variable name for signature
+  subsets: ["latin"],
+  weight: ["400"],
 });
 
 export const metadata: Metadata = {
-  title: "Jessa Mae R. Condrillon | Professional Portfolio",
-  description:
-    "Professional portfolio for Jessa Mae R. Condrillon, a Business Administration professional major in Financial Management with student assistant, assessment office, cashiering, and payroll-related experience.",
+  title: "Jessa Mae Condrillon | Professional Portfolio",
+  description: "Your Right Hand in Business Success.",
 };
-
 
 export default function RootLayout({
   children,
@@ -28,9 +33,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${manrope.variable} ${cormorant.variable} h-full scroll-smooth antialiased`}
+      className={`${inter.variable} ${playfair.variable} ${greatVibes.variable} h-full scroll-smooth antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col relative">{children}</body>
     </html>
   );
 }
