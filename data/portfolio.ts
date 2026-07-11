@@ -3,9 +3,15 @@ export const shortName = "Jessa Mae";
 export const roleTitle =
   "Business Administration Professional | Financial Management | E-commerce Marketing";
 
+export const email = "jessamaeramirezcondrillon2026@gmail.com";
+export const phone = "+63 951 828 0196";
+export const location = "Davao City, Philippines";
+
 export const contactLinks = {
-  onlineJobs:
-    "https://www.onlinejobs.ph/jobseekers/info/4691529",
+  email: `mailto:${email}`,
+  phone: `tel:${phone.replace(/\s+/g, "")}`,
+  linkedin: "https://www.linkedin.com/in/jessa-mae-condrillon-8a45573a5/",
+  onlineJobs: "https://www.onlinejobs.ph/jobseekers/info/4691529",
 };
 
 export const heroHighlights = [

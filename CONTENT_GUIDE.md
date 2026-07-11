@@ -10,8 +10,7 @@ This file lists the key editable content and confirmed links used in the portfol
 - OnlineJobs.ph profile: `https://www.onlinejobs.ph/jobseekers/info/4691529`
 
 ## Resume And CV Paths
-- Resume PDF: `/resume.pdf`
-- Resume page: `/resume`
+- Resume PDF: `/JessaMaeCondrillon-Resume.pdf`
 - CV page: `/cv`
 
 ## Optional Media
@@ -23,7 +22,7 @@ This file lists the key editable content and confirmed links used in the portfol
 - Shared confirmed profile data in `data/portfolio.ts`
 - Resume layout and content in `components/resume-document.tsx`
 - CV layout and content in `components/cv-document.tsx`
-- Resume page wrapper in `app/resume/page.tsx`
+- Resume print layout wrapper in `app/resume/pdf/page.tsx`
 - CV page wrapper in `app/cv/page.tsx`
 
 ## Important Reminders

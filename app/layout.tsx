@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter, Great_Vibes } from "next/font/google";
+import { Playfair_Display, Inter, Great_Vibes, Montserrat } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -20,6 +20,12 @@ const greatVibes = Great_Vibes({
   weight: ["400"],
 });
 
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+});
+
 export const metadata: Metadata = {
   title: "Jessa Mae Condrillon | Professional Portfolio",
   description: "Your Right Hand in Business Success.",
@@ -33,7 +39,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${playfair.variable} ${greatVibes.variable} h-full scroll-smooth antialiased`}
+      className={`${inter.variable} ${playfair.variable} ${greatVibes.variable} ${montserrat.variable} h-full scroll-smooth antialiased`}
     >
       <body className="min-h-full flex flex-col relative">{children}</body>
     </html>

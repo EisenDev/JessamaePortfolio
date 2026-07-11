@@ -6,6 +6,7 @@ import {
   ArrowRight, Briefcase, CheckCircle, Star, Users, Monitor, Calculator, Folder,
   MessageSquare, Calendar, Landmark
 } from "lucide-react";
+import { email, phone, contactLinks } from "@/data/portfolio";
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -80,7 +81,12 @@ function HeroSection() {
           </p>
           
           <div className="pt-6 pl-1">
-            <a href="/resume.pdf" target="_blank" className="inline-flex items-center gap-6 px-10 py-5 bg-btn text-[#EFEBE4] text-[13px] tracking-[0.2em] uppercase hover:bg-[#3E4339] transition-colors">
+            <a 
+              href="/JessaMaeCondrillon-Resume.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="inline-flex items-center gap-6 px-10 py-5 bg-btn text-[#EFEBE4] text-[13px] tracking-[0.2em] uppercase hover:bg-[#3E4339] transition-colors"
+            >
               VIEW RESUME
               <ArrowRight className="w-5 h-5" strokeWidth={1} />
             </a>
@@ -1623,7 +1629,7 @@ function ContactFooterSection() {
               </p>
               
               <a 
-                href="mailto:jessamaecondrillon@gmail.com" 
+                href={contactLinks.email} 
                 className="inline-flex items-center gap-4 px-8 py-4 bg-[#CBAE85] text-[#191E15] font-bold rounded-xl hover:bg-[#DBC39E] transition-colors w-fit shadow-md text-sm tracking-wide"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -1652,7 +1658,7 @@ function ContactFooterSection() {
               <div className="space-y-1">
                 <span className="text-xs uppercase tracking-widest text-[#EFEBE4]/55 font-bold">Email</span>
                 <p className="text-[17px] font-serif text-[#FAF7F2] font-semibold">
-                  jessamaecondrillon@gmail.com
+                  {email}
                 </p>
               </div>
             </div>
@@ -1667,7 +1673,7 @@ function ContactFooterSection() {
               <div className="space-y-1">
                 <span className="text-xs uppercase tracking-widest text-[#EFEBE4]/55 font-bold">Phone</span>
                 <p className="text-[17px] font-serif text-[#FAF7F2] font-semibold">
-                  +63 912 345 6789
+                  {phone}
                 </p>
               </div>
             </div>
@@ -1730,8 +1736,9 @@ function ContactFooterSection() {
           <div className="flex items-center gap-3">
             {/* LinkedIn */}
             <a 
-              href="#" 
+              href={contactLinks.linkedin} 
               target="_blank" 
+              rel="noopener noreferrer"
               className="w-10 h-10 rounded-full border border-[#CBAE85]/20 flex items-center justify-center text-[#CBAE85]/70 hover:text-[#CBAE85] hover:border-[#CBAE85] transition-all"
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -1743,7 +1750,7 @@ function ContactFooterSection() {
             
             {/* Email */}
             <a 
-              href="mailto:jessamaecondrillon@gmail.com" 
+              href={contactLinks.email} 
               className="w-10 h-10 rounded-full border border-[#CBAE85]/20 flex items-center justify-center text-[#CBAE85]/70 hover:text-[#CBAE85] hover:border-[#CBAE85] transition-all"
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -1754,8 +1761,9 @@ function ContactFooterSection() {
             
             {/* WhatsApp */}
             <a 
-              href="https://wa.me/639123456789" 
+              href={`https://wa.me/${phone.replace(/[+\s]/g, "")}`}
               target="_blank" 
+              rel="noopener noreferrer"
               className="w-10 h-10 rounded-full border border-[#CBAE85]/20 flex items-center justify-center text-[#CBAE85]/70 hover:text-[#CBAE85] hover:border-[#CBAE85] transition-all"
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

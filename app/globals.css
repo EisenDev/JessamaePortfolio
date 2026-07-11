@@ -11,6 +11,7 @@
   --font-sans: var(--font-inter);
   --font-serif: var(--font-playfair);
   --font-signature: var(--font-alex);
+  --font-montserrat: var(--font-montserrat);
 }
 
 :root {
