@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { 
   ArrowRight, Briefcase, CheckCircle, Star, Users, Monitor, Calculator, Folder,
-  MessageSquare, Calendar, Landmark
+  MessageSquare, Calendar, Landmark, Menu, X
 } from "lucide-react";
 import { email, phone, contactLinks } from "@/data/portfolio";
 
@@ -15,21 +15,29 @@ const navLinks = [
   { name: "Skills", href: "#skills" },
   { name: "Tools", href: "#tools" },
   { name: "Work", href: "#work" },
-  { name: "Certificates", href: "#certificates" },
+  // { name: "Certificates", href: "#certificates" }, // TEMP: uncomment when real certs are ready
   { name: "Contact", href: "#contact" },
 ];
 
 function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#FAF7F2]/75 backdrop-blur-md border-b border-gold/10 shadow-sm transition-all">
       <div className="w-full max-w-[1800px] mx-auto px-6 lg:px-10 xl:px-16 py-5 flex items-center justify-between">
-        <Link href="#home" className="text-[1.6rem] lg:text-[1.8rem] font-serif text-foreground tracking-wide hover:text-gold transition-colors flex items-center gap-2">
+        <Link 
+          href="#home" 
+          className="text-[1.6rem] lg:text-[1.8rem] font-serif text-foreground tracking-wide hover:text-gold transition-colors flex items-center gap-2"
+          onClick={() => setMenuOpen(false)}
+        >
           Jessa Mae Condrillon
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className="text-gold shrink-0">
             <path d="M2 22C12 22 17 12 17 2" />
             <path d="M9 14c1.5-1 3-3 3-5" />
           </svg>
         </Link>
+
+        {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-8 xl:gap-10">
           {navLinks.map((link) => (
             <div key={link.name} className="relative group">
@@ -39,72 +47,122 @@ function Header() {
             </div>
           ))}
         </nav>
+
+        {/* Hamburger Menu Button */}
+        <button 
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="lg:hidden p-2 text-foreground hover:text-gold transition-colors focus:outline-none"
+          aria-label="Toggle menu"
+          aria-expanded={menuOpen}
+        >
+          {menuOpen ? (
+            <X className="w-7 h-7" strokeWidth={1.5} />
+          ) : (
+            <Menu className="w-7 h-7" strokeWidth={1.5} />
+          )}
+        </button>
       </div>
+
+      {/* Mobile Menu Panel */}
+      {menuOpen && (
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-[#FAF7F2] border-b border-gold/15 shadow-md py-5 px-6 z-40 transition-all">
+          <nav className="flex flex-col space-y-3">
+            {navLinks.map((link) => (
+              <Link 
+                key={link.name} 
+                href={link.href} 
+                onClick={() => setMenuOpen(false)}
+                className="text-[15px] font-serif text-foreground hover:text-gold transition-colors tracking-wide py-2 border-b border-gold/5 last:border-b-0"
+              >
+                {link.name}
+              </Link>
+            ))}
+          </nav>
+        </div>
+      )}
     </header>
   );
 }
 
 function HeroSection() {
   return (
-    <section id="home" className="relative h-screen min-h-[850px] w-full flex items-end overflow-hidden">
+    <section id="home" className="relative min-h-screen lg:h-screen lg:min-h-[850px] w-full flex items-center lg:items-end overflow-hidden pt-24 pb-12 lg:py-0">
       
-      {/* Decorative Left Branch */}
+      {/* Decorative Left/Bottom Branch (Desktop only) */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src="/floral_branch.jpg" alt="floral decoration" className="absolute -left-16 bottom-0 w-[450px] opacity-30 mix-blend-multiply pointer-events-none transform rotate-12 z-0" />
+      <img src="/floral_branch.jpg" alt="floral decoration" className="absolute -left-16 bottom-0 w-[450px] opacity-30 mix-blend-multiply pointer-events-none transform rotate-12 z-0 hidden lg:block" />
 
-      {/* Main Grid Layout to align perfectly with the header */}
-      <div className="w-full max-w-[1800px] mx-auto px-6 lg:px-10 xl:px-16 flex flex-col lg:flex-row items-center lg:items-end justify-between h-full relative z-10">
+      {/* Decorative Mobile Bottom-Right Branch */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/floral_branch.jpg" alt="floral decoration" className="absolute -right-16 bottom-0 w-[250px] md:w-[350px] opacity-30 mix-blend-multiply pointer-events-none transform scale-x-[-1] z-0 lg:hidden" />
+
+      {/* Main Grid Layout */}
+      <div className="w-full max-w-[1800px] mx-auto px-6 lg:px-10 xl:px-16 flex flex-col-reverse lg:flex-row items-center lg:items-end justify-between h-full relative z-10 gap-10 lg:gap-8">
         
-        {/* Left Content */}
-        <div className="flex-1 flex flex-col justify-center space-y-8 pb-32 pt-16 w-full max-w-[55%] lg:mb-[12vh]">
-          <div className="flex flex-col space-y-4">
-            <span className="text-[2.2rem] lg:text-[2.6rem] font-serif text-gold font-light tracking-wide italic">Jessa Mae Condrillon</span>
+        {/* Left Content — takes exactly half on desktop so text never hits the image */}
+        <div className="w-full lg:w-1/2 flex flex-col justify-center space-y-5 lg:space-y-7 pt-6 lg:pt-16 pb-10 lg:pb-28 lg:mb-[8vh]">
+          
+          {/* Italic name + decorative line */}
+          <div className="flex flex-col space-y-3">
+            <span className="text-[1.5rem] sm:text-[1.8rem] md:text-[2rem] lg:text-[2.2rem] xl:text-[2.4rem] font-serif text-gold font-light tracking-wide italic">
+              Jessa Mae Condrillon
+            </span>
             <div className="flex items-center gap-4">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className="text-gold shrink-0">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className="text-gold shrink-0">
                 <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" />
               </svg>
-              <div className="h-[1.5px] w-64 bg-gold/50 relative">
+              <div className="h-[1.5px] w-36 sm:w-48 lg:w-56 bg-gold/50 relative">
                 <div className="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 border-t border-r border-gold/70 transform rotate-45" />
               </div>
             </div>
           </div>
           
-          <h1 className="text-[3.5rem] sm:text-[4.5rem] lg:text-[5.5rem] xl:text-[6rem] font-serif leading-[1.05] text-foreground tracking-tight whitespace-nowrap overflow-visible">
+          {/* Headline — fluid clamp so it NEVER overflows */}
+          <h1
+            className="font-serif leading-[1.08] text-foreground tracking-tight"
+            style={{ fontSize: "clamp(1.9rem, 4.5vw, 5rem)" }}
+          >
             Your Right Hand <br />
             in Business Success.
           </h1>
           
-          <p className="text-[17px] lg:text-[18px] text-foreground/80 max-w-[520px] leading-[1.8] pl-1">
-            Supporting organizations through dependable<br/>
-            administrative assistance, financial awareness,<br/>
-            and professional office operations.
+          {/* Subtitle */}
+          <p className="text-[15px] sm:text-[16px] lg:text-[17px] xl:text-[18px] text-foreground/80 max-w-[480px] leading-[1.8] pl-0.5">
+            Supporting organizations through dependable
+            {" "}administrative assistance, financial awareness,
+            {" "}and professional office operations.
           </p>
           
-          <div className="pt-6 pl-1">
+          {/* CTA Button */}
+          <div className="pt-3 lg:pt-4">
             <a 
               href="/JessaMaeCondrillon-Resume.pdf" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="inline-flex items-center gap-6 px-10 py-5 bg-btn text-[#EFEBE4] text-[13px] tracking-[0.2em] uppercase hover:bg-[#3E4339] transition-colors"
+              className="inline-flex items-center gap-5 px-8 py-4 lg:px-10 lg:py-5 bg-btn text-[#EFEBE4] text-[12px] lg:text-[13px] tracking-[0.2em] uppercase hover:bg-[#3E4339] transition-colors"
             >
               VIEW RESUME
-              <ArrowRight className="w-5 h-5" strokeWidth={1} />
+              <ArrowRight className="w-4 h-4 lg:w-5 lg:h-5" strokeWidth={1} />
             </a>
           </div>
         </div>
         
-        {/* Right Image Frame */}
-        <div className="relative w-full lg:w-[45%] h-[65vh] lg:h-[85vh] flex justify-end items-end z-10">
-          <div className="relative w-full max-w-[600px] h-full">
+        {/* Right Image Frame — mobile: centered portrait, desktop: right-aligned tall frame */}
+        <div className="relative w-[78%] sm:w-[60%] md:w-[50%] lg:w-[46%] aspect-[1/1.3] lg:aspect-auto lg:h-[78vh] xl:h-[86vh] max-w-[420px] lg:max-w-[560px] mx-auto lg:mx-0 flex justify-center lg:justify-end items-end z-10">
+          <div className="relative w-full h-full">
             
-            {/* Right Floral Decoration BEHIND the frame */}
+            {/* Floral behind frame — mobile only */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/floral_branch.jpg" alt="floral decoration" className="absolute -right-24 top-[15%] w-[450px] opacity-30 mix-blend-multiply pointer-events-none z-0 transform scale-x-[-1] -rotate-12" />
+            <img src="/floral_branch.jpg" alt="" aria-hidden="true" className="absolute -left-14 -top-10 w-[200px] sm:w-[260px] opacity-35 mix-blend-multiply pointer-events-none z-0 transform rotate-[45deg] lg:hidden" />
+
+            {/* Floral right side */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/floral_branch.jpg" alt="" aria-hidden="true" className="absolute -right-14 lg:-right-24 bottom-[8%] lg:bottom-auto lg:top-[15%] w-[200px] md:w-[300px] lg:w-[420px] opacity-30 mix-blend-multiply pointer-events-none z-0 transform scale-x-[-1] -rotate-12" />
 
             {/* Gold Outline Frame */}
-            <div className="absolute -inset-x-5 -top-5 bottom-0 border border-gold/70 rounded-t-[1000px] border-b-0 z-10 pointer-events-none" />
+            <div className="absolute -inset-x-4 -top-4 bottom-0 border border-gold/70 rounded-t-[1000px] border-b-0 z-10 pointer-events-none" />
             
-            {/* Image Container */}
+            {/* Image */}
             <div className="relative w-full h-full rounded-t-[1000px] overflow-hidden bg-[#e0d6c8] z-20 shadow-xl">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/profile.jpg" alt="Jessa Mae Condrillon" className="w-full h-full object-cover object-top" />
@@ -1012,267 +1070,276 @@ function HighlightsSection() {
   );
 }
 
-function CertificatesSection() {
-  const [activeTab, setActiveTab] = useState("all");
-
-  const categories = [
-    { id: "all", name: "All Certificates", icon: <Users className="w-4 h-4" /> },
-    { id: "administrative", name: "Administrative", icon: <Briefcase className="w-4 h-4" /> },
-    { id: "finance", name: "Finance & Accounting", icon: <Calculator className="w-4 h-4" /> },
-    { id: "digital", name: "Digital & Productivity", icon: <Monitor className="w-4 h-4" /> },
-  ];
-
-  const certs = [
-    {
-      title: "Excel Essentials",
-      issuer: "Microsoft",
-      date: "May 2025",
-      category: "digital",
-      logo: "Microsoft",
-      logoColor: "text-[#2F7037]",
-      type: "microsoft"
-    },
-    {
-      title: "Financial Accounting Basics",
-      issuer: "Great Learning",
-      date: "March 2025",
-      category: "finance",
-      logo: "Great Learning",
-      logoColor: "text-[#005691]",
-      type: "greatlearning"
-    },
-    {
-      title: "Google Workspace Fundamentals",
-      issuer: "Google",
-      date: "January 2025",
-      category: "digital",
-      logo: "Google",
-      logoColor: "text-[#4285F4]",
-      type: "google"
-    },
-    {
-      title: "Canva for Work",
-      issuer: "Canva",
-      date: "January 2025",
-      category: "digital",
-      logo: "Canva",
-      logoColor: "text-[#00C4CC]",
-      type: "canva"
-    },
-    {
-      title: "Customer Service Excellence",
-      issuer: "Coursera",
-      date: "December 2024",
-      category: "administrative",
-      logo: "Coursera",
-      logoColor: "text-[#0056D2]",
-      type: "coursera"
-    },
-    {
-      title: "Office Administration and Management",
-      issuer: "ATC Training Center",
-      date: "November 2024",
-      category: "administrative",
-      logo: "ATC Training Center",
-      logoColor: "text-[#A8201A]",
-      type: "atc"
-    }
-  ];
-
-  const filteredCerts = activeTab === "all" ? certs : certs.filter(c => c.category === activeTab);
-
-  return (
-    <section id="certificates" className="py-32 px-6 lg:px-10 xl:px-16 max-w-[1800px] mx-auto relative overflow-hidden">
-      {/* Background floral assets */}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src="/floral_branch.jpg" alt="floral decoration" className="absolute -left-20 top-[30%] w-[380px] opacity-15 mix-blend-multiply pointer-events-none transform rotate-12 z-0" />
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src="/floral_branch.jpg" alt="floral decoration" className="absolute -right-20 top-[60%] w-[420px] opacity-20 mix-blend-multiply pointer-events-none transform scale-x-[-1] -rotate-12 z-0" />
-
-      {/* Top Header Part */}
-      <div className="w-full flex flex-col lg:flex-row justify-between items-center lg:items-start gap-12 lg:gap-20 mb-20 relative z-10">
-        {/* Left Side Header */}
-        <div className="w-full lg:w-[50%] flex flex-col space-y-6">
-          <div className="flex items-center gap-4">
-            <span className="uppercase tracking-[0.2em] text-gold text-sm font-semibold">PROFESSIONAL DEVELOPMENT</span>
-            <div className="h-[1px] w-48 bg-gold/50" />
-          </div>
-          <h2 className="text-4xl lg:text-5xl xl:text-6xl font-serif text-foreground leading-[1.15]">
-            Investing in continuous learning to grow, improve, and deliver reliable support.
-          </h2>
-          <p className="text-foreground/70 max-w-xl leading-[1.8] text-[17px]">
-            I continuously develop my knowledge and skills through relevant training and certifications.
-          </p>
-        </div>
-
-        {/* Right Side learning journey card */}
-        <div className="w-full lg:w-[45%]">
-          <div className="bg-[#FAF7F2] border border-gold/30 rounded-[2rem] p-8 lg:p-10 shadow-sm space-y-6">
-            <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-full border border-gold/40 flex items-center justify-center text-gold bg-white">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
-                  <path d="M12 6v6l4 2" />
-                </svg>
-              </div>
-              <div>
-                <h3 className="text-xl font-serif text-foreground">My Learning Journey</h3>
-                <div className="h-[1px] w-24 bg-gold/30 mt-1" />
-              </div>
-            </div>
-
-            <ul className="space-y-4 text-[15px]">
-              <li className="flex items-center gap-3 text-foreground/80">
-                <CheckCircle className="w-5 h-5 text-[#2F7037] shrink-0" />
-                <span>Administrative Excellence</span>
-              </li>
-              <li className="flex items-center gap-3 text-foreground/80">
-                <CheckCircle className="w-5 h-5 text-[#2F7037] shrink-0" />
-                <span>Financial Management</span>
-              </li>
-              <li className="flex items-center gap-3 text-gold font-medium">
-                <div className="w-5 h-5 rounded-full border border-gold flex items-center justify-center shrink-0">
-                  <ArrowRight className="w-3 h-3 text-gold" strokeWidth={2.5} />
-                </div>
-                <span>Bookkeeping (In Progress)</span>
-              </li>
-            </ul>
-
-            <div className="border-t border-gold/25 pt-6">
-              <h4 className="text-[12px] font-bold tracking-[0.15em] text-[#8C6D3E] uppercase mb-4">Future Certifications I&apos;m Working Towards</h4>
-              <ul className="space-y-2 text-[14px] text-foreground/70 list-disc pl-5 marker:text-gold">
-                <li>NC II Bookkeeping</li>
-                <li>QuickBooks Online</li>
-                <li>Xero Advisor Certification</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Filter Tabs */}
-      <div className="flex flex-wrap justify-center gap-4 mb-16 relative z-10">
-        {categories.map((tab) => (
-          <button
-            key={tab.id}
-            onClick={() => setActiveTab(tab.id)}
-            className={`flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium transition-all ${
-              activeTab === tab.id
-                ? "bg-[#4E5645] text-white shadow-md"
-                : "bg-white text-foreground/70 border border-gold/20 hover:border-gold/50"
-            }`}
-          >
-            {tab.icon}
-            {tab.name}
-          </button>
-        ))}
-      </div>
-
-      {/* Certificates Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-8 relative z-10 max-w-[1500px] mx-auto mb-20">
-        {filteredCerts.map((cert, idx) => (
-          <div key={idx} className="bg-white border border-gold/25 rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col h-full group">
-            {/* HTML Certificate Thumbnail */}
-            <div className="relative w-full aspect-[1.4/1] bg-[#FAF8F5] border-b border-gold/20 p-6 flex flex-col justify-between overflow-hidden select-none group-hover:bg-[#FDFCFB] transition-colors shadow-inner">
-              <div className="absolute inset-3 border border-[#E6DCCF]/50 pointer-events-none" />
-              
-              {/* Top Row: Logo */}
-              <div className="flex justify-between items-center z-10">
-                <span className={`text-[10px] font-extrabold tracking-wider ${cert.logoColor} uppercase`}>{cert.logo}</span>
-                {cert.type === "google" && (
-                  <div className="w-8 h-8 rounded-full bg-[#4285F4]/10 border border-[#4285F4]/30 flex items-center justify-center">
-                    <span className="text-[8px] font-bold text-[#4285F4]">G</span>
-                  </div>
-                )}
-                {cert.type === "microsoft" && (
-                  <div className="w-8 h-8 bg-[#2F7037]/10 border border-[#2F7037]/30 flex items-center justify-center">
-                    <span className="text-[8px] font-bold text-[#2F7037]">MS</span>
-                  </div>
-                )}
-              </div>
-
-              {/* Certificate content text */}
-              <div className="text-center z-10 my-auto flex flex-col items-center py-2">
-                <p className="text-[7px] tracking-[0.25em] uppercase text-foreground/40 font-bold mb-1.5">Certificate of Completion</p>
-                <h4 className="text-xl signature text-gold mb-1">Jessa Mae Condrillon</h4>
-                <div className="h-[0.5px] w-24 bg-gold/20 mb-2" />
-                <p className="text-[12px] font-serif text-foreground font-semibold leading-tight max-w-[85%] text-center">
-                  {cert.title}
-                </p>
-              </div>
-
-              {/* Footer row */}
-              <div className="flex justify-between items-end z-10 pt-2">
-                <div className="text-left">
-                  <p className="text-[6px] uppercase tracking-[0.15em] text-foreground/40 font-semibold">Verified Credential</p>
-                  <p className="text-[9px] font-serif font-bold text-foreground/75">{cert.issuer}</p>
-                </div>
-                {/* Gold Seal */}
-                <div className="w-8 h-8 rounded-full bg-gold/5 border border-gold/40 flex items-center justify-center shrink-0">
-                  <div className="w-6 h-6 rounded-full border border-dashed border-gold/30" />
-                </div>
-              </div>
-            </div>
-
-            {/* Card Info Details */}
-            <div className="p-8 flex-1 flex flex-col justify-between">
-              <div>
-                <h3 className="text-xl font-serif text-foreground leading-snug mb-2">{cert.title}</h3>
-                <p className="text-[14px] text-foreground/60 mb-4">{cert.issuer}</p>
-              </div>
-
-              <div className="flex items-center justify-between border-t border-gold/15 pt-6 mt-4">
-                <div className="flex items-center gap-2 text-foreground/50 text-[13px]">
-                  <Calendar className="w-4 h-4 text-gold" />
-                  <span>Issued: {cert.date}</span>
-                </div>
-                <a href="#" className="flex items-center gap-1.5 text-[13px] text-gold hover:text-[#8C6D3E] font-medium transition-colors">
-                  View Credential
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                    <polyline points="15 3 21 3 21 9" />
-                    <line x1="10" y1="14" x2="21" y2="3" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Bottom Banner */}
-      <div className="max-w-[1300px] mx-auto relative z-10">
-        <div className="w-full bg-[#FAF7F2] border border-gold/30 rounded-[2rem] py-6 px-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
-          <div className="flex items-center gap-6 text-left flex-1">
-            <div className="w-14 h-14 rounded-full border border-gold/30 flex items-center justify-center text-gold shrink-0 bg-white">
-              <span className="font-serif text-3xl leading-none -mt-2">&ldquo;</span>
-            </div>
-            <p className="text-[16px] lg:text-[17px] text-foreground/80 leading-relaxed max-w-xl">
-              I believe continuous learning is essential to delivering <br className="hidden lg:inline" />
-              accurate, efficient, and professional support every day.
-            </p>
-          </div>
-          
-          <div className="hidden md:block h-14 w-[1px] bg-gold/20" />
-
-          <div className="flex items-center gap-4 shrink-0">
-            <span className="text-2xl lg:text-3xl signature text-gold whitespace-nowrap">
-              Always Learning. Always Growing.
-            </span>
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="text-gold hidden lg:block opacity-80">
-              <path d="M2 22C12 22 17 12 17 2" />
-              <path d="M9 14c1.5-1 3-3 3-5" />
-              <path d="M6 17c1.5-1 2.5-3 2.5-4.5" />
-              <path d="M12 11c1.5-1 2.5-2.5 2.5-4" />
-              <path d="M15 8c1.5-1 2-2 2-3" />
-            </svg>
-          </div>
-        </div>
-      </div>
-
-    </section>
-  );
-}
+// ============================================================
+// CERTIFICATES SECTION — commented out until real certs exist.
+// To restore: remove the leading '//' from each line below.
+// ============================================================
+// /* ============================================================
+//    CERTIFICATES SECTION — commented out until real certs exist
+//    Uncomment the entire block below when ready.
+//    ============================================================
+// function CertificatesSection() {
+//   const [activeTab, setActiveTab] = useState("all");
+//
+//   const categories = [
+//     { id: "all", name: "All Certificates", icon: <Users className="w-4 h-4" /> },
+//     { id: "administrative", name: "Administrative", icon: <Briefcase className="w-4 h-4" /> },
+//     { id: "finance", name: "Finance & Accounting", icon: <Calculator className="w-4 h-4" /> },
+//     { id: "digital", name: "Digital & Productivity", icon: <Monitor className="w-4 h-4" /> },
+//   ];
+//
+//   const certs = [
+//     {
+//       title: "Excel Essentials",
+//       issuer: "Microsoft",
+//       date: "May 2025",
+//       category: "digital",
+//       logo: "Microsoft",
+//       logoColor: "text-[#2F7037]",
+//       type: "microsoft"
+//     },
+//     {
+//       title: "Financial Accounting Basics",
+//       issuer: "Great Learning",
+//       date: "March 2025",
+//       category: "finance",
+//       logo: "Great Learning",
+//       logoColor: "text-[#005691]",
+//       type: "greatlearning"
+//     },
+//     {
+//       title: "Google Workspace Fundamentals",
+//       issuer: "Google",
+//       date: "January 2025",
+//       category: "digital",
+//       logo: "Google",
+//       logoColor: "text-[#4285F4]",
+//       type: "google"
+//     },
+//     {
+//       title: "Canva for Work",
+//       issuer: "Canva",
+//       date: "January 2025",
+//       category: "digital",
+//       logo: "Canva",
+//       logoColor: "text-[#00C4CC]",
+//       type: "canva"
+//     },
+//     {
+//       title: "Customer Service Excellence",
+//       issuer: "Coursera",
+//       date: "December 2024",
+//       category: "administrative",
+//       logo: "Coursera",
+//       logoColor: "text-[#0056D2]",
+//       type: "coursera"
+//     },
+//     {
+//       title: "Office Administration and Management",
+//       issuer: "ATC Training Center",
+//       date: "November 2024",
+//       category: "administrative",
+//       logo: "ATC Training Center",
+//       logoColor: "text-[#A8201A]",
+//       type: "atc"
+//     }
+//   ];
+//
+//   const filteredCerts = activeTab === "all" ? certs : certs.filter(c => c.category === activeTab);
+//
+//   return (
+//     <section id="certificates" className="py-32 px-6 lg:px-10 xl:px-16 max-w-[1800px] mx-auto relative overflow-hidden">
+//       {/* Background floral assets */}
+//       {/* eslint-disable-next-line @next/next/no-img-element */}
+//       <img src="/floral_branch.jpg" alt="floral decoration" className="absolute -left-20 top-[30%] w-[380px] opacity-15 mix-blend-multiply pointer-events-none transform rotate-12 z-0" />
+//       {/* eslint-disable-next-line @next/next/no-img-element */}
+//       <img src="/floral_branch.jpg" alt="floral decoration" className="absolute -right-20 top-[60%] w-[420px] opacity-20 mix-blend-multiply pointer-events-none transform scale-x-[-1] -rotate-12 z-0" />
+//
+//       {/* Top Header Part */}
+//       <div className="w-full flex flex-col lg:flex-row justify-between items-center lg:items-start gap-12 lg:gap-20 mb-20 relative z-10">
+//         {/* Left Side Header */}
+//         <div className="w-full lg:w-[50%] flex flex-col space-y-6">
+//           <div className="flex items-center gap-4">
+//             <span className="uppercase tracking-[0.2em] text-gold text-sm font-semibold">PROFESSIONAL DEVELOPMENT</span>
+//             <div className="h-[1px] w-48 bg-gold/50" />
+//           </div>
+//           <h2 className="text-4xl lg:text-5xl xl:text-6xl font-serif text-foreground leading-[1.15]">
+//             Investing in continuous learning to grow, improve, and deliver reliable support.
+//           </h2>
+//           <p className="text-foreground/70 max-w-xl leading-[1.8] text-[17px]">
+//             I continuously develop my knowledge and skills through relevant training and certifications.
+//           </p>
+//         </div>
+//
+//         {/* Right Side learning journey card */}
+//         <div className="w-full lg:w-[45%]">
+//           <div className="bg-[#FAF7F2] border border-gold/30 rounded-[2rem] p-8 lg:p-10 shadow-sm space-y-6">
+//             <div className="flex items-center gap-4">
+//               <div className="w-10 h-10 rounded-full border border-gold/40 flex items-center justify-center text-gold bg-white">
+//                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+//                   <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+//                   <path d="M12 6v6l4 2" />
+//                 </svg>
+//               </div>
+//               <div>
+//                 <h3 className="text-xl font-serif text-foreground">My Learning Journey</h3>
+//                 <div className="h-[1px] w-24 bg-gold/30 mt-1" />
+//               </div>
+//             </div>
+//
+//             <ul className="space-y-4 text-[15px]">
+//               <li className="flex items-center gap-3 text-foreground/80">
+//                 <CheckCircle className="w-5 h-5 text-[#2F7037] shrink-0" />
+//                 <span>Administrative Excellence</span>
+//               </li>
+//               <li className="flex items-center gap-3 text-foreground/80">
+//                 <CheckCircle className="w-5 h-5 text-[#2F7037] shrink-0" />
+//                 <span>Financial Management</span>
+//               </li>
+//               <li className="flex items-center gap-3 text-gold font-medium">
+//                 <div className="w-5 h-5 rounded-full border border-gold flex items-center justify-center shrink-0">
+//                   <ArrowRight className="w-3 h-3 text-gold" strokeWidth={2.5} />
+//                 </div>
+//                 <span>Bookkeeping (In Progress)</span>
+//               </li>
+//             </ul>
+//
+//             <div className="border-t border-gold/25 pt-6">
+//               <h4 className="text-[12px] font-bold tracking-[0.15em] text-[#8C6D3E] uppercase mb-4">Future Certifications I&apos;m Working Towards</h4>
+//               <ul className="space-y-2 text-[14px] text-foreground/70 list-disc pl-5 marker:text-gold">
+//                 <li>NC II Bookkeeping</li>
+//                 <li>QuickBooks Online</li>
+//                 <li>Xero Advisor Certification</li>
+//               </ul>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//
+//       {/* Filter Tabs */}
+//       <div className="flex flex-wrap justify-center gap-4 mb-16 relative z-10">
+//         {categories.map((tab) => (
+//           <button
+//             key={tab.id}
+//             onClick={() => setActiveTab(tab.id)}
+//             className={`flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium transition-all ${
+//               activeTab === tab.id
+//                 ? "bg-[#4E5645] text-white shadow-md"
+//                 : "bg-white text-foreground/70 border border-gold/20 hover:border-gold/50"
+//             }`}
+//           >
+//             {tab.icon}
+//             {tab.name}
+//           </button>
+//         ))}
+//       </div>
+//
+//       {/* Certificates Grid */}
+//       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-8 relative z-10 max-w-[1500px] mx-auto mb-20">
+//         {filteredCerts.map((cert, idx) => (
+//           <div key={idx} className="bg-white border border-gold/25 rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col h-full group">
+//             {/* HTML Certificate Thumbnail */}
+//             <div className="relative w-full aspect-[1.4/1] bg-[#FAF8F5] border-b border-gold/20 p-6 flex flex-col justify-between overflow-hidden select-none group-hover:bg-[#FDFCFB] transition-colors shadow-inner">
+//               <div className="absolute inset-3 border border-[#E6DCCF]/50 pointer-events-none" />
+//
+//               {/* Top Row: Logo */}
+//               <div className="flex justify-between items-center z-10">
+//                 <span className={`text-[10px] font-extrabold tracking-wider ${cert.logoColor} uppercase`}>{cert.logo}</span>
+//                 {cert.type === "google" && (
+//                   <div className="w-8 h-8 rounded-full bg-[#4285F4]/10 border border-[#4285F4]/30 flex items-center justify-center">
+//                     <span className="text-[8px] font-bold text-[#4285F4]">G</span>
+//                   </div>
+//                 )}
+//                 {cert.type === "microsoft" && (
+//                   <div className="w-8 h-8 bg-[#2F7037]/10 border border-[#2F7037]/30 flex items-center justify-center">
+//                     <span className="text-[8px] font-bold text-[#2F7037]">MS</span>
+//                   </div>
+//                 )}
+//               </div>
+//
+//               {/* Certificate content text */}
+//               <div className="text-center z-10 my-auto flex flex-col items-center py-2">
+//                 <p className="text-[7px] tracking-[0.25em] uppercase text-foreground/40 font-bold mb-1.5">Certificate of Completion</p>
+//                 <h4 className="text-xl signature text-gold mb-1">Jessa Mae Condrillon</h4>
+//                 <div className="h-[0.5px] w-24 bg-gold/20 mb-2" />
+//                 <p className="text-[12px] font-serif text-foreground font-semibold leading-tight max-w-[85%] text-center">
+//                   {cert.title}
+//                 </p>
+//               </div>
+//
+//               {/* Footer row */}
+//               <div className="flex justify-between items-end z-10 pt-2">
+//                 <div className="text-left">
+//                   <p className="text-[6px] uppercase tracking-[0.15em] text-foreground/40 font-semibold">Verified Credential</p>
+//                   <p className="text-[9px] font-serif font-bold text-foreground/75">{cert.issuer}</p>
+//                 </div>
+//                 {/* Gold Seal */}
+//                 <div className="w-8 h-8 rounded-full bg-gold/5 border border-gold/40 flex items-center justify-center shrink-0">
+//                   <div className="w-6 h-6 rounded-full border border-dashed border-gold/30" />
+//                 </div>
+//               </div>
+//             </div>
+//
+//             {/* Card Info Details */}
+//             <div className="p-8 flex-1 flex flex-col justify-between">
+//               <div>
+//                 <h3 className="text-xl font-serif text-foreground leading-snug mb-2">{cert.title}</h3>
+//                 <p className="text-[14px] text-foreground/60 mb-4">{cert.issuer}</p>
+//               </div>
+//
+//               <div className="flex items-center justify-between border-t border-gold/15 pt-6 mt-4">
+//                 <div className="flex items-center gap-2 text-foreground/50 text-[13px]">
+//                   <Calendar className="w-4 h-4 text-gold" />
+//                   <span>Issued: {cert.date}</span>
+//                 </div>
+//                 <a href="#" className="flex items-center gap-1.5 text-[13px] text-gold hover:text-[#8C6D3E] font-medium transition-colors">
+//                   View Credential
+//                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+//                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+//                     <polyline points="15 3 21 3 21 9" />
+//                     <line x1="10" y1="14" x2="21" y2="3" />
+//                   </svg>
+//                 </a>
+//               </div>
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+//
+//       {/* Bottom Banner */}
+//       <div className="max-w-[1300px] mx-auto relative z-10">
+//         <div className="w-full bg-[#FAF7F2] border border-gold/30 rounded-[2rem] py-6 px-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+//           <div className="flex items-center gap-6 text-left flex-1">
+//             <div className="w-14 h-14 rounded-full border border-gold/30 flex items-center justify-center text-gold shrink-0 bg-white">
+//               <span className="font-serif text-3xl leading-none -mt-2">&ldquo;</span>
+//             </div>
+//             <p className="text-[16px] lg:text-[17px] text-foreground/80 leading-relaxed max-w-xl">
+//               I believe continuous learning is essential to delivering <br className="hidden lg:inline" />
+//               accurate, efficient, and professional support every day.
+//             </p>
+//           </div>
+//
+//           <div className="hidden md:block h-14 w-[1px] bg-gold/20" />
+//
+//           <div className="flex items-center gap-4 shrink-0">
+//             <span className="text-2xl lg:text-3xl signature text-gold whitespace-nowrap">
+//               Always Learning. Always Growing.
+//             </span>
+//             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="text-gold hidden lg:block opacity-80">
+//               <path d="M2 22C12 22 17 12 17 2" />
+//               <path d="M9 14c1.5-1 3-3 3-5" />
+//               <path d="M6 17c1.5-1 2.5-3 2.5-4.5" />
+//               <path d="M12 11c1.5-1 2.5-2.5 2.5-4" />
+//               <path d="M15 8c1.5-1 2-2 2-3" />
+//             </svg>
+//           </div>
+//         </div>
+//       </div>
+//
+//     </section>
+//   );
+// }
+// ============================================================
 
 function ProcessSection() {
   const stepsRow1 = [
@@ -1791,7 +1858,7 @@ export default function Home() {
         <SkillsSection />
         <ToolsSection />
         <HighlightsSection />
-        <CertificatesSection />
+        {/* <CertificatesSection /> */} {/* TEMP: commented out — no real certs yet */}
         <QuoteSection />
         <ProcessSection />
         <FaqSection />
