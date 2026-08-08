@@ -122,14 +122,14 @@ function HeroSection() {
             className="font-serif leading-[1.08] text-foreground tracking-tight"
             style={{ fontSize: "clamp(1.9rem, 4.5vw, 5rem)" }}
           >
-            Accurate Bookkeeping <br />
-            & Financial Support.
+            Exceptional Customer Service <br />
+            & Administrative Support.
           </h1>
           
           {/* Subtitle */}
           <p className="text-[15px] sm:text-[16px] lg:text-[17px] xl:text-[18px] text-foreground/80 max-w-[480px] leading-[1.8] pl-0.5">
-            Helping businesses maintain precise ledgers, balance accounts,
-            {" "}and streamline administrative workflows with absolute accuracy.
+            Helping businesses deliver outstanding customer support, keep
+            {" "}accurate bookkeeping records, and manage daily data entry and administrative operations.
           </p>
           
           {/* CTA Button */}
@@ -203,7 +203,7 @@ function IntroSection() {
         {/* Right Content */}
         <div className="w-full lg:max-w-[750px] flex flex-col justify-center space-y-6 pt-10 lg:pt-0">
           <h2 className="text-[4.5rem] lg:text-[7rem] signature text-foreground transform -rotate-2 origin-left whitespace-nowrap">Hi, I&apos;m Jessa!</h2>
-          <h3 className="text-4xl lg:text-5xl xl:text-[52px] font-serif text-foreground leading-[1.15]">Your Trusted Partner <br/>in Bookkeeping & Finance.</h3>
+          <h3 className="text-4xl lg:text-5xl xl:text-[52px] font-serif text-foreground leading-[1.15]">Your Trusted Partner <br/>in Customer Care & Admin.</h3>
           
           <div className="flex items-center gap-4 py-2">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className="text-gold">
@@ -213,10 +213,10 @@ function IntroSection() {
           </div>
           
           <p className="text-foreground/80 leading-[1.8] text-[17px] xl:text-[18px] max-w-[720px]">
-            I&apos;m an organized, detail-oriented, and dependable certified Bookkeeper with a strong<br className="hidden md:inline" />
-            foundation in Financial Management. With 4 years of hands-on experience as a Student Assistant<br className="hidden md:inline" />
-            in the Assessment Office, I specialize in cashiering support, payroll-related documentation,<br className="hidden md:inline" />
-            and general ledger management, ensuring balanced accounts and clean financial records.
+            I&apos;m Jessa Mae, a Business Administration graduate majoring in Financial Management and a certified Bookkeeper. <br className="hidden md:inline" />
+            With 4 years of hands-on experience as a Student Assistant in the Assessment Office, I combine empathy in customer care <br className="hidden md:inline" />
+            with structured administrative organization. I specialize in resolving client inquiries, email ticketing queue support, <br className="hidden md:inline" />
+            spreadsheet data entry/database cleanup, and TESDA-certified bookkeeping.
           </p>
           
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-y-10 sm:gap-y-0 pt-10 mt-4 border-t border-gold/10 max-w-2xl w-full">
@@ -233,7 +233,7 @@ function IntroSection() {
               <Landmark className="w-9 h-9 text-gold shrink-0" strokeWidth={1.5} />
               <div className="flex flex-col items-center justify-center flex-1 my-2">
                 <h4 className="text-[16px] lg:text-[17px] font-serif text-foreground leading-tight">
-                  Bookkeeping &<br />Financial Admin
+                  Customer Service<br />& Administration
                 </h4>
               </div>
               <p className="text-[10px] font-bold tracking-[0.15em] text-foreground/60 uppercase shrink-0">Specialization</p>
@@ -260,24 +260,24 @@ function IntroSection() {
 function ContributionSection() {
   const contributions = [
     {
-      icon: <Calculator className="w-8 h-8 text-gold" strokeWidth={1.5} />,
-      title: "Bookkeeping & Ledgers",
-      desc: "Maintaining general ledgers, processing accounts payable/receivable, and keeping financial records precise and organized."
+      icon: <MessageSquare className="w-8 h-8 text-gold" strokeWidth={1.5} />,
+      title: "Customer Support & Care",
+      desc: "Resolving customer inquiries via email and chat with speed, professionalism, and empathy to maintain high CSAT and SLA scores."
     },
     {
-      icon: <Landmark className="w-8 h-8 text-gold" strokeWidth={1.5} />,
-      title: "Bank Reconciliation",
-      desc: "Matching bank statements with general ledger entries, identifying variances, and clearing discrepancies to ensure balanced accounts."
+      icon: <Monitor className="w-8 h-8 text-gold" strokeWidth={1.5} />,
+      title: "Data Entry & Cleanup",
+      desc: "Encoding information accurately, cleaning messy spreadsheets using formulas (XLOOKUP, Pivot Tables), and organizing database tables."
+    },
+    {
+      icon: <Calculator className="w-8 h-8 text-gold" strokeWidth={1.5} />,
+      title: "Bookkeeping & Ledgers",
+      desc: "Certified bookkeeping NC III, ledger maintenance, bank reconciliation, cashiering support, and invoicing with strict accuracy."
     },
     {
       icon: <Folder className="w-8 h-8 text-gold" strokeWidth={1.5} />,
-      title: "Invoice & Expense Tracking",
-      desc: "Tracking vendor bills, recording operating expenses, generating client invoices, and maintaining supporting documents systematically."
-    },
-    {
-      icon: <Briefcase className="w-8 h-8 text-gold" strokeWidth={1.5} />,
-      title: "Financial Administration",
-      desc: "Supporting payroll-related documentation, cashiering support, documenting SOPs, and preparing mock reports with strict confidentiality."
+      title: "Administrative Coordination",
+      desc: "Organizing email inboxes with custom filters, managing busy calendars, and creating Standard Operating Procedures (SOPs)."
     }
   ];
 
@@ -292,11 +292,10 @@ function ContributionSection() {
           </svg>
           <div className="h-[1px] w-24 bg-gold/40" />
         </div>
-        <h2 className="text-5xl lg:text-6xl font-serif text-foreground mb-8">I keep your numbers organized <br/>and your financial records clear.</h2>
+        <h2 className="text-5xl lg:text-6xl font-serif text-foreground mb-8">I resolve customer needs <br/>and keep your operations organized.</h2>
         <p className="text-foreground/70 max-w-3xl mx-auto leading-[1.8] text-[17px]">
-          With a major in Financial Management, a TESDA Bookkeeping certification, and 4 years of hands-on<br/>
-          office experience, I bring absolute precision, time management, and integrity<br/>
-          to your business&apos;s bookkeeping and financial administration.
+          With 4 years of hands-on student assistant experience at Cor Jesu College, I combine empathy in customer care<br/>
+          with precision in data entry and TESDA-certified bookkeeping to help your business thrive.
         </p>
       </div>
 
@@ -419,56 +418,56 @@ function ExperienceSection() {
         {/* Row 2: Three columns representing detailed functions */}
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-0 pt-12">
           
-          {/* Column 1: Bookkeeping & Ledgers */}
+          {/* Column 1: Customer Service & Care */}
           <div className="flex-1 flex flex-col space-y-6">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center text-gold shrink-0">
+                <MessageSquare className="w-5 h-5" strokeWidth={1.5} />
+              </div>
+              <h4 className="text-sm font-bold tracking-[0.15em] text-foreground uppercase">CUSTOMER SERVICE & CARE</h4>
+            </div>
+            <ul className="space-y-4 pl-6 text-[15px] text-foreground/80 leading-relaxed list-disc marker:text-gold/80">
+              <li>Responded to student and visitor inquiries, resolving issues with patience and clarity</li>
+              <li>Managed office email communications, prioritizing messages and routing inquiries</li>
+              <li>Tracked follow-ups and ensured student satisfaction with office services</li>
+            </ul>
+          </div>
+
+          {/* Divider */}
+          <div className="w-[1px] bg-gold/20 self-stretch mx-8 hidden lg:block" />
+          <div className="block lg:hidden border-t border-gold/20 w-full my-2" />
+
+          {/* Column 2: Data Entry & Database Cleanup */}
+          <div className="flex-1 flex flex-col space-y-6 lg:pl-4">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center text-gold shrink-0">
+                <Monitor className="w-5 h-5" strokeWidth={1.5} />
+              </div>
+              <h4 className="text-sm font-bold tracking-[0.15em] text-foreground uppercase">DATA ENTRY & DATABASE CLEANUP</h4>
+            </div>
+            <ul className="space-y-4 pl-6 text-[15px] text-foreground/80 leading-relaxed list-disc marker:text-gold/80">
+              <li>Performed data entry, encoding records into office database systems</li>
+              <li>Developed and cleaned up tracking spreadsheets using Excel formulas</li>
+              <li>Documented Standard Operating Procedures (SOPs) for student record archiving</li>
+            </ul>
+          </div>
+
+          {/* Divider */}
+          <div className="w-[1px] bg-gold/20 self-stretch mx-8 hidden lg:block" />
+          <div className="block lg:hidden border-t border-gold/20 w-full my-2" />
+
+          {/* Column 3: Bookkeeping & Transactions */}
+          <div className="flex-1 flex flex-col space-y-6 lg:pl-4">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center text-gold shrink-0">
                 <Calculator className="w-5 h-5" strokeWidth={1.5} />
               </div>
-              <h4 className="text-sm font-bold tracking-[0.15em] text-foreground uppercase">BOOKKEEPING & LEDGERS</h4>
+              <h4 className="text-sm font-bold tracking-[0.15em] text-foreground uppercase">BOOKKEEPING & TRANSACTION</h4>
             </div>
             <ul className="space-y-4 pl-6 text-[15px] text-foreground/80 leading-relaxed list-disc marker:text-gold/80">
-              <li>Kept ledger entries and administrative documents organized and accurate</li>
-              <li>Handled data encoding and verified supporting documents for office expenses</li>
-              <li>Ensured organized, confidential, and systematic record-keeping</li>
-            </ul>
-          </div>
-
-          {/* Divider */}
-          <div className="w-[1px] bg-gold/20 self-stretch mx-8 hidden lg:block" />
-          <div className="block lg:hidden border-t border-gold/20 w-full my-2" />
-
-          {/* Column 2: Reconciliation & Transactions */}
-          <div className="flex-1 flex flex-col space-y-6 lg:pl-4">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center text-gold shrink-0">
-                <Landmark className="w-5 h-5" strokeWidth={1.5} />
-              </div>
-              <h4 className="text-sm font-bold tracking-[0.15em] text-foreground uppercase">RECONCILIATION & TRANSACTION</h4>
-            </div>
-            <ul className="space-y-4 pl-6 text-[15px] text-foreground/80 leading-relaxed list-disc marker:text-gold/80">
-              <li>Provided cashiering support and assisted with daily transaction reconciliation</li>
-              <li>Supported cash collection reports and verified transaction completeness</li>
-              <li>Handled cash-related workflows with strict accuracy and cash drawer balancing</li>
-            </ul>
-          </div>
-
-          {/* Divider */}
-          <div className="w-[1px] bg-gold/20 self-stretch mx-8 hidden lg:block" />
-          <div className="block lg:hidden border-t border-gold/20 w-full my-2" />
-
-          {/* Column 3: Payroll & Admin Support */}
-          <div className="flex-1 flex flex-col space-y-6 lg:pl-4">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center text-gold shrink-0">
-                <Briefcase className="w-5 h-5" strokeWidth={1.5} />
-              </div>
-              <h4 className="text-sm font-bold tracking-[0.15em] text-foreground uppercase">PAYROLL & ADMIN SUPPORT</h4>
-            </div>
-            <ul className="space-y-4 pl-6 text-[15px] text-foreground/80 leading-relaxed list-disc marker:text-gold/80">
-              <li>Assisted with payroll-related documentation and tracking of office hours</li>
-              <li>Maintained absolute confidentiality with sensitive financial and student data</li>
-              <li>Collaborated with office staff to ensure prompt documentation processing</li>
+              <li>Provided cashiering support and recorded daily office cash receipts</li>
+              <li>Assisted with daily cash transaction reconciliation and general ledger entries</li>
+              <li>Compiled payroll-related documentation and verified student working hours</li>
             </ul>
           </div>
 
@@ -482,12 +481,12 @@ function ExperienceSection() {
         {/* Core 1 */}
         <div className="flex-1 flex items-start gap-5">
           <div className="w-16 h-16 rounded-full border border-gold/30 flex items-center justify-center text-gold shrink-0 bg-[#FAF7F2]">
-            <Calculator className="w-6 h-6" strokeWidth={1.5} />
+            <MessageSquare className="w-6 h-6" strokeWidth={1.5} />
           </div>
           <div className="space-y-2">
-            <h4 className="text-xl font-serif text-foreground">Bookkeeping Operations</h4>
+            <h4 className="text-xl font-serif text-foreground">Customer Service</h4>
             <p className="text-[14px] text-foreground/70 leading-relaxed">
-              Recording daily transactions and maintaining precise general ledger entries.
+              Managing client communication, emails, and ticket scenarios with empathy and speed.
             </p>
           </div>
         </div>
@@ -499,12 +498,12 @@ function ExperienceSection() {
         {/* Core 2 */}
         <div className="flex-1 flex items-start gap-5 lg:pl-4">
           <div className="w-16 h-16 rounded-full border border-gold/30 flex items-center justify-center text-gold shrink-0 bg-[#FAF7F2]">
-            <Landmark className="w-6 h-6" strokeWidth={1.5} />
+            <Monitor className="w-6 h-6" strokeWidth={1.5} />
           </div>
           <div className="space-y-2">
-            <h4 className="text-xl font-serif text-foreground">Financial Administration</h4>
+            <h4 className="text-xl font-serif text-foreground">Data Entry & Admin</h4>
             <p className="text-[14px] text-foreground/70 leading-relaxed">
-              Reconciling statements, tracking client invoices, and managing vendor bills.
+              Spreadsheet cleanups, calendar scheduling, database encoding, and SOP documentation.
             </p>
           </div>
         </div>
@@ -516,12 +515,12 @@ function ExperienceSection() {
         {/* Core 3 */}
         <div className="flex-1 flex items-start gap-5 lg:pl-4">
           <div className="w-16 h-16 rounded-full border border-gold/30 flex items-center justify-center text-gold shrink-0 bg-[#FAF7F2]">
-            <Folder className="w-6 h-6" strokeWidth={1.5} />
+            <Calculator className="w-6 h-6" strokeWidth={1.5} />
           </div>
           <div className="space-y-2">
-            <h4 className="text-xl font-serif text-foreground">Record Management & SOPs</h4>
+            <h4 className="text-xl font-serif text-foreground">Certified Bookkeeping</h4>
             <p className="text-[14px] text-foreground/70 leading-relaxed">
-              Securing sensitive documents and documenting clear administrative office workflows.
+              Reconciliation of accounts, invoice processing, and financial record auditing.
             </p>
           </div>
         </div>
@@ -536,38 +535,38 @@ function SkillsSection() {
   const categories = [
     {
       num: "01",
-      title: "Bookkeeping & Ledgers",
-      image: "/skills_finance.jpg",
+      title: "Customer Support & SLA",
+      image: "/skills_admin.jpg",
       bullets: [
-        "Recording transactions & journal entries",
-        "Cashiering & cash flow monitoring",
-        "Invoice preparation & billing support",
-        "Basic payroll documentation",
-        "Absolute confidentiality of financial records"
+        "Email & chat customer care",
+        "Mock ticket resolution",
+        "FAQ & knowledge base setup",
+        "CSAT & SLA metrics tracking",
+        "Empathy & active listening"
       ]
     },
     {
       num: "02",
-      title: "Spreadsheets & Reporting",
+      title: "Data Entry & Clean-up",
       image: "/skills_digital.jpg",
       bullets: [
-        "Data clean-up & formatting in Excel",
-        "Advanced Excel formulas (VLOOKUP, XLOOKUP)",
+        "Excel/Sheets database cleanup",
+        "Advanced formulas (XLOOKUP, VLOOKUP)",
         "Pivot Tables & data analysis",
-        "Expense tracking & category mapping",
-        "Generating mock Profit & Loss statements"
+        "Calendar & schedule coordination",
+        "Inbox filters & labels management"
       ]
     },
     {
       num: "03",
-      title: "Administrative & SOPs",
-      image: "/skills_admin.jpg",
+      title: "Bookkeeping & Ledgers",
+      image: "/skills_finance.jpg",
       bullets: [
-        "Writing Standard Operating Procedures (SOPs)",
-        "Google Workspace (Docs, Sheets, Drive)",
-        "Trello, Asana, and task management",
-        "Quick learner of new accounting software",
-        "Email inbox & calendar management"
+        "TESDA Certified Bookkeeper",
+        "Bank statement reconciliation",
+        "Cashiering & cash flow monitoring",
+        "Expense & invoice tracking",
+        "Process documentation (SOPs)"
       ]
     }
   ];
@@ -668,8 +667,28 @@ function SkillsSection() {
 function ToolsSection() {
   const tools = [
     {
+      title: "Zendesk & Support Tools",
+      desc: "Managing customer support email ticket queues, writing macros, and tracking SLAs.",
+      icon: (
+        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-[#4E5645] mb-6">
+          <rect x="2" y="2" width="20" height="20" rx="2" />
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" strokeWidth={1.5} />
+        </svg>
+      )
+    },
+    {
+      title: "Xero",
+      desc: "Cloud accounting software for invoice creation, expenses, and ledger reconciliation.",
+      icon: (
+        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-[#4E5645] mb-6">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M9 9l6 6m0-6l-6 6" strokeWidth="1.5" />
+        </svg>
+      )
+    },
+    {
       title: "QuickBooks Online",
-      desc: "Managing customer invoices, vendor bills, and bank feeds for real-time reporting.",
+      desc: "Recording transaction records, customer invoices, and balancing financial books.",
       icon: (
         <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-[#4E5645] mb-6">
           <circle cx="12" cy="12" r="10" />
@@ -679,18 +698,8 @@ function ToolsSection() {
       )
     },
     {
-      title: "Xero",
-      desc: "Cloud accounting software for ledger reconciliation, invoicing, and generating financial statements.",
-      icon: (
-        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-[#4E5645] mb-6">
-          <circle cx="12" cy="12" r="10" />
-          <path d="M9 9l6 6m0-6l-6 6" strokeWidth="1.5" />
-        </svg>
-      )
-    },
-    {
-      title: "Microsoft Excel",
-      desc: "Spreadsheets, financial models, advanced formulas (XLOOKUP), and data cleaning.",
+      title: "Microsoft Excel & Sheets",
+      desc: "Spreadsheet database formatting, formulas (XLOOKUP), and data cleaning.",
       icon: (
         <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-[#4E5645] mb-6">
           <rect x="4" y="4" width="16" height="16" rx="2" />
@@ -703,7 +712,7 @@ function ToolsSection() {
     },
     {
       title: "Google Workspace",
-      desc: "Docs, Sheets, and Drive for collaborative document sharing and cloud storage.",
+      desc: "Docs, Sheets, Drive, and calendar scheduling for collaborative team operations.",
       icon: (
         <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-[#4E5645] mb-6">
           <circle cx="12" cy="12" r="10" />
@@ -714,18 +723,8 @@ function ToolsSection() {
       )
     },
     {
-      title: "Gmail & Outlook",
-      desc: "Managing inbox organization, filters, labels, and professional email correspondence.",
-      icon: (
-        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-[#4E5645] mb-6">
-          <rect x="3" y="4" width="18" height="16" rx="2" />
-          <path d="M19 6l-7 7-7-7" strokeWidth="1.5" />
-        </svg>
-      )
-    },
-    {
-      title: "Trello & Asana",
-      desc: "Project management, daily task tracking, and coordinating workflows with teams.",
+      title: "Slack & Trello",
+      desc: "Inbox organization, project coordination, and instant team communication.",
       icon: (
         <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-[#4E5645] mb-6">
           <rect x="3" y="3" width="18" height="18" rx="2" />
@@ -899,48 +898,27 @@ function HighlightsSection() {
   const highlights = [
     {
       num: "01",
-      title: "Sample Financial Reports",
-      image: "/highlights_sheet.jpg",
-      desc: "Anonymized, clean mock Profit & Loss (P&L) statements, Balance Sheets, and Accounts Receivable aging summaries showing accuracy and layout design.",
-      icon: (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <line x1="18" y1="20" x2="18" y2="10" />
-          <line x1="12" y1="20" x2="12" y2="4" />
-          <line x1="6" y1="20" x2="6" y2="14" />
-        </svg>
-      ),
-      tags: ["Profit & Loss (P&L)", "Balance Sheets", "Financial Reporting"]
+      title: "Mock Ticket Resolutions & FAQs",
+      image: "/highlights_doc.jpg",
+      desc: "Customer service resolution scripts for complex ticket scenarios (angry clients, billing issues, delayed orders) alongside a mock FAQ knowledge base.",
+      icon: <MessageSquare className="w-5 h-5" strokeWidth={1.5} />,
+      tags: ["Ticketing Scripts", "FAQ Knowledge Base", "CSAT & SLA Metrics"]
     },
     {
       num: "02",
-      title: "Bank Reconciliation Walkthrough",
-      image: "/highlights_workflow.jpg",
-      desc: "A step-by-step mock case study showing reconciliation of bank statements with general ledger accounts to verify transactions and clear discrepancies.",
-      icon: (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-          <line x1="16" y1="2" x2="16" y2="6" />
-          <line x1="8" y1="2" x2="8" y2="6" />
-          <line x1="3" y1="10" x2="21" y2="10" />
-        </svg>
-      ),
-      tags: ["Bank Reconciliation", "Ledger Matching", "Discrepancy Cleanup"]
+      title: "Spreadsheet Database Cleanup",
+      image: "/highlights_sheet.jpg",
+      desc: "A before-and-after sample showing a disorganized data spreadsheet cleaned, formatted, and structured using advanced Excel/Sheets formulas (XLOOKUP, Pivot Tables).",
+      icon: <Monitor className="w-5 h-5" strokeWidth={1.5} />,
+      tags: ["Data Encoding", "Database Cleanup", "Excel Formulas"]
     },
     {
       num: "03",
-      title: "Invoice & Expense Tracking",
-      image: "/highlights_doc.jpg",
-      desc: "A customized spreadsheet template and workflow designed for tracking vendor bills, client invoicing, and recording expenses by categories.",
-      icon: (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
-          <path d="M14 2v4a2 2 0 0 0 2 2h4" />
-          <path d="M10 9H8" />
-          <path d="M16 13H8" />
-          <path d="M16 17H8" />
-        </svg>
-      ),
-      tags: ["Vendor Bills", "Client Invoices", "Expense Categories"]
+      title: "Invoicing & Bank Reconciliation",
+      image: "/highlights_workflow.jpg",
+      desc: "Anonymized mock financial statements (Profit & Loss) and a workflow walkthrough showing bank statements matched with general ledger entries.",
+      icon: <Calculator className="w-5 h-5" strokeWidth={1.5} />,
+      tags: ["Bank Reconciliation", "P&L Reporting", "Expense Tracking"]
     }
   ];
 
@@ -1374,11 +1352,11 @@ function FaqSection() {
   const faqs = [
     {
       q: "Are you available for remote work?",
-      a: "Yes, I am open to remote, hybrid, and on-site bookkeeping roles depending on your team's requirements."
+      a: "Yes, I am open to remote, hybrid, and on-site Customer Service and Administrative roles depending on your team's requirements."
     },
     {
       q: "What type of work do you specialize in?",
-      a: "I specialize in virtual bookkeeping, bank reconciliation, ledger clean-up, invoice and expense tracking, and financial administration for small businesses and professionals."
+      a: "I specialize in virtual Customer Service (email support, ticketing queue management), Data Entry (database spreadsheet cleanup using Excel formulas, calendar scheduling, SOP creation), and certified Bookkeeping (bank reconciliation, cash handling, and ledgers)."
     },
     {
       q: "Do you have experience in bookkeeping?",
@@ -1386,15 +1364,15 @@ function FaqSection() {
     },
     {
       q: "What tools and software are you comfortable using?",
-      a: "I am highly comfortable with Xero, QuickBooks Online, Microsoft Excel, Google Sheets, Google Workspace, and communication tools like Slack and Zoom."
+      a: "I am highly comfortable with customer care software like Zendesk, accounting tools like Xero and QuickBooks Online, spreadsheet software like Microsoft Excel and Google Sheets, and team productivity platforms like Trello, Asana, Slack, and Zoom."
     },
     {
       q: "Are you open to full-time or part-time positions?",
-      a: "Yes, I am open to both full-time and part-time positions where I can provide bookkeeping and financial administration value."
+      a: "Yes, I am open to both full-time and part-time positions where I can provide customer care and administrative value."
     },
     {
       q: "What makes you different from other candidates?",
-      a: "My combination of a Bachelor's degree in Business Administration major in Financial Management, 4 years of hands-on student assistant experience, a TESDA Bookkeeping NC III certification, and absolute attention to detail and confidentiality."
+      a: "My combination of a Bachelor's degree in Business Administration major in Financial Management, 4 years of hands-on student assistant experience, a TESDA Bookkeeping NC III certification, and absolute attention to detail, empathy, and confidentiality."
     },
     {
       q: "How do you ensure confidentiality and data security?",

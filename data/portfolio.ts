@@ -1,6 +1,6 @@
 export const fullName = "Jessa Mae R. Condrillon";
 export const shortName = "Jessa Mae";
-export const roleTitle = "Bookkeeping & Financial Administration Specialist";
+export const roleTitle = "Customer Service Specialist | Bookkeeping & Administrative Support";
 
 export const email = "jessamaeramirezcondrillon2026@gmail.com";
 export const phone = "+63 951 828 0196";
@@ -15,69 +15,70 @@ export const contactLinks = {
 
 export const heroHighlights = [
   "4 years of Student Assistant experience at Cor Jesu College",
-  "Cashiering support and basic transaction handling",
-  "Payroll-related documentation and record processing",
+  "Customer Support, Email & Ticketing Management",
   "TESDA Bookkeeping NC III Certified",
+  "Advanced Spreadsheet Data Entry & Cleanup",
 ];
 
 export const aboutParagraphs = [
-  "I am a Business Administration professional major in Financial Management with four years of practical service as a Student Assistant in the Assessment Office of Cor Jesu College. I specialize in virtual bookkeeping, bank reconciliation, ledger clean-up, and financial administration.",
-  "Leveraging my academic background in Financial Management and my hands-on office experience, I help businesses maintain accurate financial records, organize daily workflows, and document key processes with complete confidentiality and precision.",
+  "I am a Business Administration graduate majoring in Financial Management with four years of hands-on experience as a Student Assistant in the Assessment Office of Cor Jesu College. My primary focus is providing exceptional Customer Service, backed by strong skills in Bookkeeping and General Administrative Support.",
+  "I help businesses resolve customer inquiries with empathy and speed, maintain accurate financial records through my financial background and TESDA Bookkeeping certification, and organize office workflows—such as calendar management and spreadsheet database cleanup—with absolute detail and confidentiality.",
 ];
 
 export const experiencePoints = [
-  "Supported financial administration at the Cor Jesu College Assessment Office, ensuring daily operations run smoothly.",
-  "Assisted with cashiering support, basic transaction processing, and daily cash collection reconciliation.",
-  "Gained payroll-related exposure through record keeping, verification of hours, and processing of supporting documents.",
-  "Organized and processed administrative documents and student financial records with careful attention to detail.",
-  "Maintained physical and digital filing systems for confidential student records, reducing retrieval time and improving efficiency.",
-  "Applied time management, accuracy, and absolute confidentiality in managing sensitive institutional financial information.",
+  "Provided direct support to students and visitors, resolving inquiries patiently and professionally.",
+  "Managed office email communications, prioritizing, labeling, and responding to inbox inquiries systematically.",
+  "Assisted with cashiering support, transaction recording, and daily cash reconciliation with high accuracy.",
+  "Gained exposure to payroll-related workflows by verifying hours and compiling documentation.",
+  "Performed accurate data entry and spreadsheet cleanups using Microsoft Excel and Google Sheets formulas.",
+  "Maintained physical and digital filing systems for sensitive records, strictly adhering to confidentiality guidelines.",
 ];
 
 export const experienceAreas = [
-  "Bookkeeping & Ledger support",
-  "Bank & Cashiering reconciliation",
-  "Payroll-related documentation",
-  "Financial record management",
-  "Document processing & auditing",
-  "Administrative office support",
+  "Customer service & email support",
+  "Ticket resolution & communication",
+  "Bookkeeping & ledger support",
+  "Bank & transaction reconciliation",
+  "Data entry & database cleanup",
+  "Inbox & calendar management",
+  "Payroll documentation support",
   "Process documentation (SOPs)",
   "Confidential record handling",
   "Time management & prioritization",
-  "Data accuracy & verification",
-  "Office communication",
+  "SLA & CSAT tracking awareness",
 ];
 
 export const administrativeSkills = [
-  "Document processing",
-  "Financial record keeping",
-  "SOP development",
-  "Filing & digital archiving",
-  "Inbox & schedule coordination",
+  "Spreadsheet data entry",
+  "Database cleanup & formulas",
+  "Inbox & email management",
+  "Calendar & schedule management",
+  "SOP & process documentation",
 ];
 
 export const financeSkills = [
   "Virtual bookkeeping",
   "Bank reconciliation",
   "Cashiering support",
-  "Payroll documentation",
-  "Transaction verification",
+  "Invoice & expense tracking",
+  "Payroll-related documentation",
 ];
 
 export const professionalSkills = [
-  "Accuracy & attention to detail",
-  "Confidentiality & privacy control",
-  "Effective communication",
+  "Empathy & customer care",
+  "Problem solving & ticketing",
+  "Clear office communication",
+  "Confidentiality & record security",
   "Time management & deadlines",
-  "Problem solving & analysis",
 ];
 
 export const digitalSkills = [
+  "Zendesk & customer care tools",
   "Xero (Xero Advisor)",
   "QuickBooks Online",
-  "Microsoft Excel & Sheets (formulas, pivot tables)",
-  "Google Workspace",
-  "Trello & Asana",
-  "Zoom & Slack",
+  "Microsoft Excel (formulas, pivot tables)",
+  "Google Workspace (Docs, Sheets, Drive)",
+  "Trello, Asana, Slack & Zoom",
 ];
+
 
