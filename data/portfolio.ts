@@ -1,7 +1,6 @@
 export const fullName = "Jessa Mae R. Condrillon";
 export const shortName = "Jessa Mae";
-export const roleTitle =
-  "Business Administration Professional | Financial Management | E-commerce Marketing";
+export const roleTitle = "Bookkeeping & Financial Administration Specialist";
 
 export const email = "jessamaeramirezcondrillon2026@gmail.com";
 export const phone = "+63 951 828 0196";
@@ -15,70 +14,70 @@ export const contactLinks = {
 };
 
 export const heroHighlights = [
-  "4 years of student assistant experience",
-  "Assessment office and student records support",
-  "Cashiering and payroll-related exposure",
-  "E-commerce marketing knowledge",
+  "4 years of Student Assistant experience at Cor Jesu College",
+  "Cashiering support and basic transaction handling",
+  "Payroll-related documentation and record processing",
+  "TESDA Bookkeeping NC III Certified",
 ];
 
 export const aboutParagraphs = [
-  "I am a Business Administration professional major in Financial Management with practical experience developed through four years of service as a Student Assistant at Cor Jesu College.",
-  "My background includes assessment office support, student record assistance, document processing, cashiering support, payroll-related exposure, and e-commerce marketing support.",
+  "I am a Business Administration professional major in Financial Management with four years of practical service as a Student Assistant in the Assessment Office of Cor Jesu College. I specialize in virtual bookkeeping, bank reconciliation, ledger clean-up, and financial administration.",
+  "Leveraging my academic background in Financial Management and my hands-on office experience, I help businesses maintain accurate financial records, organize daily workflows, and document key processes with complete confidentiality and precision.",
 ];
 
 export const experiencePoints = [
-  "I assisted with assessment office operations and daily administrative processes.",
-  "I supported student record handling and document processing with careful attention to detail.",
-  "I helped with cashiering-related workflows and basic transaction support.",
-  "I gained payroll-related exposure through finance-related office tasks and support work.",
-  "I assisted students and staff with professionalism, patience, and clear communication.",
-  "I strengthened my skills in accuracy, confidentiality, time management, and dependable office support.",
+  "Supported financial administration at the Cor Jesu College Assessment Office, ensuring daily operations run smoothly.",
+  "Assisted with cashiering support, basic transaction processing, and daily cash collection reconciliation.",
+  "Gained payroll-related exposure through record keeping, verification of hours, and processing of supporting documents.",
+  "Organized and processed administrative documents and student financial records with careful attention to detail.",
+  "Maintained physical and digital filing systems for confidential student records, reducing retrieval time and improving efficiency.",
+  "Applied time management, accuracy, and absolute confidentiality in managing sensitive institutional financial information.",
 ];
 
 export const experienceAreas = [
-  "Assessment office support",
-  "Student record assistance",
-  "Document processing",
-  "Administrative support",
-  "Cashiering support",
-  "Payroll-related exposure",
-  "E-commerce marketing support",
-  "Office communication",
+  "Bookkeeping & Ledger support",
+  "Bank & Cashiering reconciliation",
+  "Payroll-related documentation",
+  "Financial record management",
+  "Document processing & auditing",
+  "Administrative office support",
+  "Process documentation (SOPs)",
   "Confidential record handling",
-  "Time management",
-  "Accuracy and attention to detail",
+  "Time management & prioritization",
+  "Data accuracy & verification",
+  "Office communication",
 ];
 
 export const administrativeSkills = [
   "Document processing",
-  "Student record assistance",
-  "Office support",
-  "Filing and organization",
-  "Data accuracy",
+  "Financial record keeping",
+  "SOP development",
+  "Filing & digital archiving",
+  "Inbox & schedule coordination",
 ];
 
 export const financeSkills = [
+  "Virtual bookkeeping",
+  "Bank reconciliation",
   "Cashiering support",
-  "Payroll-related assistance",
-  "Financial record awareness",
-  "Basic transaction handling",
-  "Attention to detail",
+  "Payroll documentation",
+  "Transaction verification",
 ];
 
 export const professionalSkills = [
-  "Communication",
-  "Time management",
-  "Confidentiality",
-  "Customer service",
-  "Problem solving",
-  "Teamwork",
+  "Accuracy & attention to detail",
+  "Confidentiality & privacy control",
+  "Effective communication",
+  "Time management & deadlines",
+  "Problem solving & analysis",
 ];
 
 export const digitalSkills = [
-  "Microsoft Word",
-  "Microsoft Excel",
+  "Xero (Xero Advisor)",
+  "QuickBooks Online",
+  "Microsoft Excel & Sheets (formulas, pivot tables)",
   "Google Workspace",
-  "Email communication",
-  "E-commerce marketing",
-  "Basic office systems",
+  "Trello & Asana",
+  "Zoom & Slack",
 ];
+

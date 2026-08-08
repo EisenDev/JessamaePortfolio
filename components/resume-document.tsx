@@ -44,14 +44,12 @@ export function ResumeDocument({ pdf = false }: { pdf?: boolean }) {
       </h2>
       <div className="h-[1px] w-full bg-[#00c4cc] mt-1 mb-2.5" />
       <p className="text-[11.5px] leading-relaxed text-black text-justify">
-        Administrative and Finance professional with 4 years of experience supporting finance office
-        operations, bookkeeping, and administrative processes in a fast-paced environment. I
-        triple-check every financial document before submission, keep confidential records organized,
-        and consistently deliver work on time without requiring follow-ups. Experienced in coordinating
-        administrative tasks, preparing reports, managing documentation, and providing dependable
-        support using Microsoft Excel, Google Workspace, and AI productivity tools. Currently expanding
-        my expertise in Xero, QuickBooks Online, and Shopify to support Executive Assistant,
-        Administrative Assistant, Bookkeeper, and E-commerce Virtual Assistant roles.
+        Detail-oriented Business Administration graduate major in Financial Management and certified Bookkeeper with 
+        4 years of hands-on experience supporting administrative and financial workflows in the Assessment Office 
+        of Cor Jesu College. Specializes in virtual bookkeeping, bank reconciliation, ledger management, data cleaning, 
+        and invoice/expense tracking. Known for absolute accuracy, double-checking numbers, meeting deadlines, and 
+        maintaining strict confidentiality. Proficient in Xero, QuickBooks Online, and advanced Excel formulas to 
+        help businesses keep clear and balanced financial records.
       </p>
     </section>
   );
@@ -64,11 +62,13 @@ export function ResumeDocument({ pdf = false }: { pdf?: boolean }) {
       <div className="h-[1px] w-full bg-[#00c4cc] mt-1 mb-2.5" />
       <p className="text-[11px] leading-relaxed text-black">
         {[
-          "Bookkeeping", "Accounts Payable", "Accounts Receivable", "Bank Reconciliation",
-          "Data Entry", "Invoice Processing", "Financial Record Management", "Microsoft Excel",
-          "Google Sheets", "Xero", "QuickBooks Online", "Shopify", "Inventory Management",
-          "Order Processing", "Customer Support", "Email Management", "Google Workspace",
-          "Canva", "ChatGPT", "Time Management", "Attention to Detail", "Administrative Support"
+          "Virtual Bookkeeping", "General Ledger Management", "Accounts Payable (A/P)",
+          "Accounts Receivable (A/R)", "Bank & Cash Reconciliation", "Data Cleaning & Entry",
+          "Invoice & Billing Processing", "Expense Tracking & Mapping", "Financial Documentation",
+          "Microsoft Excel (VLOOKUP, XLOOKUP, Pivot Tables)", "Google Sheets", "Xero (Xero Advisor)",
+          "QuickBooks Online", "SOP Development", "Inbox & Calendar Management",
+          "Time Management", "Accuracy & Detail Focus", "Confidential Record Handling",
+          "Administrative Office Support", "Customer Service & Communication"
         ].join(" | ")}
       </p>
     </section>
@@ -82,36 +82,30 @@ export function ResumeDocument({ pdf = false }: { pdf?: boolean }) {
       <div className="h-[1px] w-full bg-[#00c4cc] mt-1 mb-2.5" />
       
       <div className="text-[11.5px] text-black">
-        <h3 className="font-bold">Finance Office Student Assistant</h3>
-        <p className="italic text-slate-700 mt-0.5">Cor Jesu College, Inc. | June 2022 - July 2026</p>
+        <h3 className="font-bold">Student Assistant (Assessment Office)</h3>
+        <p className="italic text-slate-700 mt-0.5">Cor Jesu College | June 2022 - July 2026</p>
         
         <ul className="list-disc pl-5 mt-2 space-y-1.5 text-[11px] leading-relaxed text-black">
           <li>
-            Assisted the finance office with daily bookkeeping and administrative operations,
-            maintaining accurate financial records and confidential documents.
+            Supported assessment office operations, helping manage daily administrative tasks and bookkeeping-related workflows.
           </li>
           <li>
-            Processed 100+ financial documents, payment records, and invoices weekly while ensuring
-            completeness and accuracy.
+            Assisted with cashiering support, recording payments, and performing daily transaction reconciliations with high accuracy.
           </li>
           <li>
-            Maintained digital and physical filing systems, improving document retrieval and
-            organization for finance personnel.
+            Gained exposure to payroll-related workflows by organizing timesheets, verifying hours, and processing payroll documentation.
           </li>
           <li>
-            Prepared reports, spreadsheets, and financial documentation using Microsoft Excel and
-            Microsoft Word.
+            Managed student records and document processing, handling highly confidential academic and financial information securely.
           </li>
           <li>
-            Assisted students, faculty, and staff with finance-related inquiries while providing professional
-            customer service.
+            Created and maintained organized digital spreadsheets using Microsoft Excel and Google Sheets for administrative tracking.
           </li>
           <li>
-            Supported cash collection, payment recording, and other finance office administrative tasks.
+            Communicated with students, faculty, and office visitors to resolve inquiries with patience, professionalism, and clarity.
           </li>
           <li>
-            Collaborated with finance staff to ensure timely processing of office transactions and
-            documentation.
+            Ensured absolute accuracy, privacy compliance, and strict attention to detail in all document verification tasks.
           </li>
         </ul>
       </div>
@@ -130,26 +124,26 @@ export function ResumeDocument({ pdf = false }: { pdf?: boolean }) {
         <tbody>
           <tr className="border-b border-slate-300">
             <td className="w-[180px] p-2 border-r border-slate-300 font-bold bg-slate-50/20 align-top">
-              Productivity & Admin
+              Accounting & Finance
             </td>
             <td className="p-2 align-top">
-              Google Workspace (Docs, Sheets, Slides, Drive, Calendar, Gmail), Microsoft 365 (Excel, Word, PowerPoint, Outlook), Notion, Airtable, Dropbox, OneDrive
+              Xero (Xero Advisor), QuickBooks Online, Microsoft Excel, Google Sheets, Bank Reconciliation, General Ledger, Accounts Payable (A/P), Accounts Receivable (A/R), Invoicing, Expense Tracking, Basic Payroll Documentation
             </td>
           </tr>
           <tr className="border-b border-slate-300">
             <td className="w-[180px] p-2 border-r border-slate-300 font-bold bg-slate-50/20 align-top">
-              Communication
+              Productivity & Admin
             </td>
             <td className="p-2 align-top">
-              Slack, Zoom, Google Meet, Microsoft Teams, Loom, Calendly, Skype, Discord
+              Google Workspace (Docs, Sheets, Slides, Drive, Calendar, Gmail), Microsoft 365 (Word, Excel, PowerPoint, Outlook), Notion, PDF Tools, Dropbox, OneDrive
             </td>
           </tr>
           <tr>
             <td className="w-[180px] p-2 border-r border-slate-300 font-bold bg-slate-50/20 align-top">
-              CRM & Marketing
+              Communication
             </td>
             <td className="p-2 align-top">
-              HubSpot CRM, Zoho CRM, Salesforce (Basic), Mailchimp, Klaviyo, GoHighLevel (Basic), Buffer
+              Slack, Zoom, Google Meet, Microsoft Teams, Loom, Skype, Discord
             </td>
           </tr>
         </tbody>
@@ -163,22 +157,6 @@ export function ResumeDocument({ pdf = false }: { pdf?: boolean }) {
         <tbody>
           <tr className="border-b border-slate-300">
             <td className="w-[180px] p-2 border-r border-slate-300 font-bold bg-slate-50/20 align-top">
-              AI & Automation
-            </td>
-            <td className="p-2 align-top">
-              ChatGPT, Google Gemini, Microsoft Copilot, Grammarly, Zapier (Basic), Make.com (Basic), Google Apps Script (Basic), Perplexity
-            </td>
-          </tr>
-          <tr className="border-b border-slate-300">
-            <td className="w-[180px] p-2 border-r border-slate-300 font-bold bg-slate-50/20 align-top">
-              Design & Content
-            </td>
-            <td className="p-2 align-top">
-              Canva, CapCut, Adobe Express, Figma (Basic), Meta Business Suite, Pinterest, TinyPNG
-            </td>
-          </tr>
-          <tr className="border-b border-slate-300">
-            <td className="w-[180px] p-2 border-r border-slate-300 font-bold bg-slate-50/20 align-top">
               Project Management
             </td>
             <td className="p-2 align-top">
@@ -187,18 +165,26 @@ export function ResumeDocument({ pdf = false }: { pdf?: boolean }) {
           </tr>
           <tr className="border-b border-slate-300">
             <td className="w-[180px] p-2 border-r border-slate-300 font-bold bg-slate-50/20 align-top">
-              Finance & Bookkeeping
+              AI & Productivity
             </td>
             <td className="p-2 align-top">
-              Xero, QuickBooks Online, Wave Accounting, Microsoft Excel, Google Sheets, Bank Reconciliation, Accounts Payable, Accounts Receivable, Invoice Processing, Expense Tracking, Journal Entries, General Ledger, Financial Reporting
+              ChatGPT, Google Gemini, Microsoft Copilot, Grammarly, Perplexity
+            </td>
+          </tr>
+          <tr className="border-b border-slate-300">
+            <td className="w-[180px] p-2 border-r border-slate-300 font-bold bg-slate-50/20 align-top">
+              Customer Service
+            </td>
+            <td className="p-2 align-top">
+              Zendesk, Freshdesk, email management tools, customer support, ticketing systems
             </td>
           </tr>
           <tr>
             <td className="w-[180px] p-2 border-r border-slate-300 font-bold bg-slate-50/20 align-top">
-              E-commerce
+              Administrative & SOPs
             </td>
             <td className="p-2 align-top">
-              Shopify (Basic), WooCommerce (Basic), Amazon Seller Central (Basic), Etsy (Basic), Product Listing, Inventory Management, Order Processing, Order Tracking, Customer Support
+              Standard Operating Procedures (SOPs) development, database clean-up, filing and records management, spreadsheet calculations
             </td>
           </tr>
         </tbody>
@@ -231,8 +217,7 @@ export function ResumeDocument({ pdf = false }: { pdf?: boolean }) {
       </h2>
       <div className="h-[1px] w-full bg-[#00c4cc] mt-1 mb-2.5" />
       <ul className="list-disc pl-5 space-y-1 text-[11px] text-black">
-        <li>Practicing Data Privacy in the Workplace - TESDA - 2025</li>
-        <li>Introduction to Content Creation - TESDA - 2025</li>
+        <li>Bookkeeping NC III - Technical Education and Skills Development Authority (TESDA) - 2025</li>
       </ul>
     </section>
   );

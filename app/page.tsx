@@ -15,7 +15,7 @@ const navLinks = [
   { name: "Skills", href: "#skills" },
   { name: "Tools", href: "#tools" },
   { name: "Work", href: "#work" },
-  // { name: "Certificates", href: "#certificates" }, // TEMP: uncomment when real certs are ready
+  { name: "Certificates", href: "#certificates" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -122,15 +122,14 @@ function HeroSection() {
             className="font-serif leading-[1.08] text-foreground tracking-tight"
             style={{ fontSize: "clamp(1.9rem, 4.5vw, 5rem)" }}
           >
-            Your Right Hand <br />
-            in Business Success.
+            Accurate Bookkeeping <br />
+            & Financial Support.
           </h1>
           
           {/* Subtitle */}
           <p className="text-[15px] sm:text-[16px] lg:text-[17px] xl:text-[18px] text-foreground/80 max-w-[480px] leading-[1.8] pl-0.5">
-            Supporting organizations through dependable
-            {" "}administrative assistance, financial awareness,
-            {" "}and professional office operations.
+            Helping businesses maintain precise ledgers, balance accounts,
+            {" "}and streamline administrative workflows with absolute accuracy.
           </p>
           
           {/* CTA Button */}
@@ -204,7 +203,7 @@ function IntroSection() {
         {/* Right Content */}
         <div className="w-full lg:max-w-[750px] flex flex-col justify-center space-y-6 pt-10 lg:pt-0">
           <h2 className="text-[4.5rem] lg:text-[7rem] signature text-foreground transform -rotate-2 origin-left whitespace-nowrap">Hi, I&apos;m Jessa!</h2>
-          <h3 className="text-4xl lg:text-5xl xl:text-[52px] font-serif text-foreground leading-[1.15]">Your Trusted Partner <br/>in Business Success.</h3>
+          <h3 className="text-4xl lg:text-5xl xl:text-[52px] font-serif text-foreground leading-[1.15]">Your Trusted Partner <br/>in Bookkeeping & Finance.</h3>
           
           <div className="flex items-center gap-4 py-2">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className="text-gold">
@@ -214,10 +213,10 @@ function IntroSection() {
           </div>
           
           <p className="text-foreground/80 leading-[1.8] text-[17px] xl:text-[18px] max-w-[720px]">
-            I&apos;m an organized, detail-oriented, and dependable Business Administration professional<br className="hidden md:inline" />
-            with a strong foundation in Financial Management. With 4 years of hands-on experience in<br className="hidden md:inline" />
-            assessment office operations, cashiering support, payroll assistance, and e-commerce marketing,<br className="hidden md:inline" />
-            I help organizations maintain accurate records, smooth operations, and excellent service every day.
+            I&apos;m an organized, detail-oriented, and dependable certified Bookkeeper with a strong<br className="hidden md:inline" />
+            foundation in Financial Management. With 4 years of hands-on experience as a Student Assistant<br className="hidden md:inline" />
+            in the Assessment Office, I specialize in cashiering support, payroll-related documentation,<br className="hidden md:inline" />
+            and general ledger management, ensuring balanced accounts and clean financial records.
           </p>
           
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-y-10 sm:gap-y-0 pt-10 mt-4 border-t border-gold/10 max-w-2xl w-full">
@@ -234,7 +233,7 @@ function IntroSection() {
               <Landmark className="w-9 h-9 text-gold shrink-0" strokeWidth={1.5} />
               <div className="flex flex-col items-center justify-center flex-1 my-2">
                 <h4 className="text-[16px] lg:text-[17px] font-serif text-foreground leading-tight">
-                  Assessment Office<br />& Administrative
+                  Bookkeeping &<br />Financial Admin
                 </h4>
               </div>
               <p className="text-[10px] font-bold tracking-[0.15em] text-foreground/60 uppercase shrink-0">Specialization</p>
@@ -261,24 +260,24 @@ function IntroSection() {
 function ContributionSection() {
   const contributions = [
     {
-      icon: <Folder className="w-8 h-8 text-gold" strokeWidth={1.5} />,
-      title: "Administrative Support",
-      desc: "Managing documents, student records, filing, and office processes with accuracy and confidentiality to ensure smooth daily operations."
-    },
-    {
       icon: <Calculator className="w-8 h-8 text-gold" strokeWidth={1.5} />,
-      title: "Finance & Bookkeeping Support",
-      desc: "Assisting with payroll-related tasks, cashiering support, transaction handling, and maintaining accurate financial records and reports."
+      title: "Bookkeeping & Ledgers",
+      desc: "Maintaining general ledgers, processing accounts payable/receivable, and keeping financial records precise and organized."
     },
     {
-      icon: <Users className="w-8 h-8 text-gold" strokeWidth={1.5} />,
-      title: "Client & Office Coordination",
-      desc: "Communicating professionally with students, staff, and stakeholders while coordinating office activities and providing excellent service."
+      icon: <Landmark className="w-8 h-8 text-gold" strokeWidth={1.5} />,
+      title: "Bank Reconciliation",
+      desc: "Matching bank statements with general ledger entries, identifying variances, and clearing discrepancies to ensure balanced accounts."
     },
     {
-      icon: <Monitor className="w-8 h-8 text-gold" strokeWidth={1.5} />,
-      title: "Digital & Productivity Support",
-      desc: "Using Microsoft Office, Google Workspace, and e-commerce marketing knowledge to streamline tasks and support business operations efficiently."
+      icon: <Folder className="w-8 h-8 text-gold" strokeWidth={1.5} />,
+      title: "Invoice & Expense Tracking",
+      desc: "Tracking vendor bills, recording operating expenses, generating client invoices, and maintaining supporting documents systematically."
+    },
+    {
+      icon: <Briefcase className="w-8 h-8 text-gold" strokeWidth={1.5} />,
+      title: "Financial Administration",
+      desc: "Supporting payroll-related documentation, cashiering support, documenting SOPs, and preparing mock reports with strict confidentiality."
     }
   ];
 
@@ -293,11 +292,11 @@ function ContributionSection() {
           </svg>
           <div className="h-[1px] w-24 bg-gold/40" />
         </div>
-        <h2 className="text-5xl lg:text-6xl font-serif text-foreground mb-8">I help organizations run <br/>smoother behind the scenes.</h2>
+        <h2 className="text-5xl lg:text-6xl font-serif text-foreground mb-8">I keep your numbers organized <br/>and your financial records clear.</h2>
         <p className="text-foreground/70 max-w-3xl mx-auto leading-[1.8] text-[17px]">
-          With a strong foundation in Financial Management and hands-on<br/>
-          experience in office operations, I bring reliability, accuracy, and dedication<br/>
-          to every task that supports the success of your team.
+          With a major in Financial Management, a TESDA Bookkeeping certification, and 4 years of hands-on<br/>
+          office experience, I bring absolute precision, time management, and integrity<br/>
+          to your business&apos;s bookkeeping and financial administration.
         </p>
       </div>
 
@@ -420,43 +419,18 @@ function ExperienceSection() {
         {/* Row 2: Three columns representing detailed functions */}
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-0 pt-12">
           
-          {/* Column 1: Office Administration */}
+          {/* Column 1: Bookkeeping & Ledgers */}
           <div className="flex-1 flex flex-col space-y-6">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center text-gold shrink-0">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
-                  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
-                  <path d="M10 9H8" />
-                  <path d="M16 13H8" />
-                  <path d="M16 17H8" />
-                </svg>
-              </div>
-              <h4 className="text-sm font-bold tracking-[0.15em] text-foreground uppercase">OFFICE ADMINISTRATION</h4>
-            </div>
-            <ul className="space-y-4 pl-6 text-[15px] text-foreground/80 leading-relaxed list-disc marker:text-gold/80">
-              <li>Managed assessment office operations and daily administrative tasks</li>
-              <li>Processed documents, maintained student records, and handled filing with accuracy</li>
-              <li>Ensured organized, confidential, and efficient office workflow</li>
-            </ul>
-          </div>
-
-          {/* Divider */}
-          <div className="w-[1px] bg-gold/20 self-stretch mx-8 hidden lg:block" />
-          <div className="block lg:hidden border-t border-gold/20 w-full my-2" />
-
-          {/* Column 2: Finance Support */}
-          <div className="flex-1 flex flex-col space-y-6 lg:pl-4">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center text-gold shrink-0">
                 <Calculator className="w-5 h-5" strokeWidth={1.5} />
               </div>
-              <h4 className="text-sm font-bold tracking-[0.15em] text-foreground uppercase">FINANCE SUPPORT</h4>
+              <h4 className="text-sm font-bold tracking-[0.15em] text-foreground uppercase">BOOKKEEPING & LEDGERS</h4>
             </div>
             <ul className="space-y-4 pl-6 text-[15px] text-foreground/80 leading-relaxed list-disc marker:text-gold/80">
-              <li>Provided cashiering assistance and supported daily financial transactions</li>
-              <li>Assisted with payroll-related tasks and documentation</li>
-              <li>Maintained accurate records and supported financial processes</li>
+              <li>Kept ledger entries and administrative documents organized and accurate</li>
+              <li>Handled data encoding and verified supporting documents for office expenses</li>
+              <li>Ensured organized, confidential, and systematic record-keeping</li>
             </ul>
           </div>
 
@@ -464,18 +438,37 @@ function ExperienceSection() {
           <div className="w-[1px] bg-gold/20 self-stretch mx-8 hidden lg:block" />
           <div className="block lg:hidden border-t border-gold/20 w-full my-2" />
 
-          {/* Column 3: Professional Skills */}
+          {/* Column 2: Reconciliation & Transactions */}
           <div className="flex-1 flex flex-col space-y-6 lg:pl-4">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center text-gold shrink-0">
-                <Users className="w-5 h-5" strokeWidth={1.5} />
+                <Landmark className="w-5 h-5" strokeWidth={1.5} />
               </div>
-              <h4 className="text-sm font-bold tracking-[0.15em] text-foreground uppercase">PROFESSIONAL SKILLS</h4>
+              <h4 className="text-sm font-bold tracking-[0.15em] text-foreground uppercase">RECONCILIATION & TRANSACTION</h4>
             </div>
             <ul className="space-y-4 pl-6 text-[15px] text-foreground/80 leading-relaxed list-disc marker:text-gold/80">
-              <li>Provided assistance to students, faculty, and office personnel</li>
-              <li>Demonstrated strong communication, customer service, and interpersonal skills</li>
-              <li>Uphold confidentiality, time management, and a strong work ethic</li>
+              <li>Provided cashiering support and assisted with daily transaction reconciliation</li>
+              <li>Supported cash collection reports and verified transaction completeness</li>
+              <li>Handled cash-related workflows with strict accuracy and cash drawer balancing</li>
+            </ul>
+          </div>
+
+          {/* Divider */}
+          <div className="w-[1px] bg-gold/20 self-stretch mx-8 hidden lg:block" />
+          <div className="block lg:hidden border-t border-gold/20 w-full my-2" />
+
+          {/* Column 3: Payroll & Admin Support */}
+          <div className="flex-1 flex flex-col space-y-6 lg:pl-4">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center text-gold shrink-0">
+                <Briefcase className="w-5 h-5" strokeWidth={1.5} />
+              </div>
+              <h4 className="text-sm font-bold tracking-[0.15em] text-foreground uppercase">PAYROLL & ADMIN SUPPORT</h4>
+            </div>
+            <ul className="space-y-4 pl-6 text-[15px] text-foreground/80 leading-relaxed list-disc marker:text-gold/80">
+              <li>Assisted with payroll-related documentation and tracking of office hours</li>
+              <li>Maintained absolute confidentiality with sensitive financial and student data</li>
+              <li>Collaborated with office staff to ensure prompt documentation processing</li>
             </ul>
           </div>
 
@@ -489,12 +482,12 @@ function ExperienceSection() {
         {/* Core 1 */}
         <div className="flex-1 flex items-start gap-5">
           <div className="w-16 h-16 rounded-full border border-gold/30 flex items-center justify-center text-gold shrink-0 bg-[#FAF7F2]">
-            <Folder className="w-6 h-6" strokeWidth={1.5} />
+            <Calculator className="w-6 h-6" strokeWidth={1.5} />
           </div>
           <div className="space-y-2">
-            <h4 className="text-xl font-serif text-foreground">Administrative Operations</h4>
+            <h4 className="text-xl font-serif text-foreground">Bookkeeping Operations</h4>
             <p className="text-[14px] text-foreground/70 leading-relaxed">
-              Supporting daily office workflows with accuracy and organization.
+              Recording daily transactions and maintaining precise general ledger entries.
             </p>
           </div>
         </div>
@@ -506,12 +499,12 @@ function ExperienceSection() {
         {/* Core 2 */}
         <div className="flex-1 flex items-start gap-5 lg:pl-4">
           <div className="w-16 h-16 rounded-full border border-gold/30 flex items-center justify-center text-gold shrink-0 bg-[#FAF7F2]">
-            <Calculator className="w-6 h-6" strokeWidth={1.5} />
+            <Landmark className="w-6 h-6" strokeWidth={1.5} />
           </div>
           <div className="space-y-2">
-            <h4 className="text-xl font-serif text-foreground">Finance Exposure</h4>
+            <h4 className="text-xl font-serif text-foreground">Financial Administration</h4>
             <p className="text-[14px] text-foreground/70 leading-relaxed">
-              Cashiering support, payroll assistance, and financial documentation.
+              Reconciling statements, tracking client invoices, and managing vendor bills.
             </p>
           </div>
         </div>
@@ -523,16 +516,12 @@ function ExperienceSection() {
         {/* Core 3 */}
         <div className="flex-1 flex items-start gap-5 lg:pl-4">
           <div className="w-16 h-16 rounded-full border border-gold/30 flex items-center justify-center text-gold shrink-0 bg-[#FAF7F2]">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-gold">
-              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-              <circle cx="9" cy="7" r="4" />
-              <path d="M19 12a3 3 0 0 1 3-3 3 3 0 0 1 3 3c0 2.2-3 4-3 4s-3-1.8-3-4Z" />
-            </svg>
+            <Folder className="w-6 h-6" strokeWidth={1.5} />
           </div>
           <div className="space-y-2">
-            <h4 className="text-xl font-serif text-foreground">Professional Service</h4>
+            <h4 className="text-xl font-serif text-foreground">Record Management & SOPs</h4>
             <p className="text-[14px] text-foreground/70 leading-relaxed">
-              Providing dependable support to students, faculty, and office staff.
+              Securing sensitive documents and documenting clear administrative office workflows.
             </p>
           </div>
         </div>
@@ -547,38 +536,38 @@ function SkillsSection() {
   const categories = [
     {
       num: "01",
-      title: "Administrative Expertise",
-      image: "/skills_admin.jpg",
+      title: "Bookkeeping & Ledgers",
+      image: "/skills_finance.jpg",
       bullets: [
-        "Assessment office operations",
-        "Document management & filing",
-        "Student records & data management",
-        "Office organization & workflow",
-        "Confidentiality & attention to detail"
+        "Recording transactions & journal entries",
+        "Cashiering & cash flow monitoring",
+        "Invoice preparation & billing support",
+        "Basic payroll documentation",
+        "Absolute confidentiality of financial records"
       ]
     },
     {
       num: "02",
-      title: "Finance & Bookkeeping Knowledge",
-      image: "/skills_finance.jpg",
+      title: "Spreadsheets & Reporting",
+      image: "/skills_digital.jpg",
       bullets: [
-        "Cashiering support",
-        "Payroll-related tasks",
-        "Transaction handling",
-        "Financial documentation",
-        "Strong foundation in Financial Management"
+        "Data clean-up & formatting in Excel",
+        "Advanced Excel formulas (VLOOKUP, XLOOKUP)",
+        "Pivot Tables & data analysis",
+        "Expense tracking & category mapping",
+        "Generating mock Profit & Loss statements"
       ]
     },
     {
       num: "03",
-      title: "Digital & Productivity Proficiency",
-      image: "/skills_digital.jpg",
+      title: "Administrative & SOPs",
+      image: "/skills_admin.jpg",
       bullets: [
-        "Microsoft Office (Word, Excel, PowerPoint)",
-        "Google Workspace (Docs, Sheets, Gmail)",
-        "E-commerce marketing knowledge",
-        "Online tools & platforms",
-        "Fast learner & tech-savvy"
+        "Writing Standard Operating Procedures (SOPs)",
+        "Google Workspace (Docs, Sheets, Drive)",
+        "Trello, Asana, and task management",
+        "Quick learner of new accounting software",
+        "Email inbox & calendar management"
       ]
     }
   ];
@@ -679,8 +668,29 @@ function SkillsSection() {
 function ToolsSection() {
   const tools = [
     {
+      title: "QuickBooks Online",
+      desc: "Managing customer invoices, vendor bills, and bank feeds for real-time reporting.",
+      icon: (
+        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-[#4E5645] mb-6">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 2v20" />
+          <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" strokeWidth={1.5} />
+        </svg>
+      )
+    },
+    {
+      title: "Xero",
+      desc: "Cloud accounting software for ledger reconciliation, invoicing, and generating financial statements.",
+      icon: (
+        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-[#4E5645] mb-6">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M9 9l6 6m0-6l-6 6" strokeWidth="1.5" />
+        </svg>
+      )
+    },
+    {
       title: "Microsoft Excel",
-      desc: "Spreadsheet analysis, data organization, formulas, and financial reporting.",
+      desc: "Spreadsheets, financial models, advanced formulas (XLOOKUP), and data cleaning.",
       icon: (
         <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-[#4E5645] mb-6">
           <rect x="4" y="4" width="16" height="16" rx="2" />
@@ -692,21 +702,8 @@ function ToolsSection() {
       )
     },
     {
-      title: "Microsoft Word",
-      desc: "Creating professional documents, reports, letters, and other business materials.",
-      icon: (
-        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-[#4E5645] mb-6">
-          <rect x="4" y="4" width="16" height="16" rx="2" />
-          <path d="M10 4v16" />
-          <path d="M4 9h16" />
-          <path d="M4 14h16" />
-          <path d="M5.5 10.5l1 3 0.75-2 0.75 2 1-3" strokeWidth="1.5" />
-        </svg>
-      )
-    },
-    {
       title: "Google Workspace",
-      desc: "Cloud-based productivity tools for collaboration, file management, and real-time sharing.",
+      desc: "Docs, Sheets, and Drive for collaborative document sharing and cloud storage.",
       icon: (
         <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-[#4E5645] mb-6">
           <circle cx="12" cy="12" r="10" />
@@ -717,8 +714,8 @@ function ToolsSection() {
       )
     },
     {
-      title: "Gmail",
-      desc: "Professional email communication, organization, and inbox management.",
+      title: "Gmail & Outlook",
+      desc: "Managing inbox organization, filters, labels, and professional email correspondence.",
       icon: (
         <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-[#4E5645] mb-6">
           <rect x="3" y="4" width="18" height="16" rx="2" />
@@ -727,23 +724,15 @@ function ToolsSection() {
       )
     },
     {
-      title: "Canva",
-      desc: "Designing simple visual content, presentations, and marketing materials.",
+      title: "Trello & Asana",
+      desc: "Project management, daily task tracking, and coordinating workflows with teams.",
       icon: (
         <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-[#4E5645] mb-6">
-          <circle cx="12" cy="12" r="10" />
-          <path d="M8 12a4 4 0 1 1 8 0" />
-          <path d="M12 8v8" />
-        </svg>
-      )
-    },
-    {
-      title: "Xero",
-      desc: "Cloud accounting software for invoice management, transaction reconciliation, and financial records.",
-      icon: (
-        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-[#4E5645] mb-6">
-          <circle cx="12" cy="12" r="10" />
-          <path d="M9 9l6 6m0-6l-6 6" strokeWidth="1.5" />
+          <rect x="3" y="3" width="18" height="18" rx="2" />
+          <path d="M9 3v18" />
+          <path d="M15 3v18" />
+          <path d="M3 9h18" />
+          <path d="M3 15h18" />
         </svg>
       )
     }
@@ -910,9 +899,38 @@ function HighlightsSection() {
   const highlights = [
     {
       num: "01",
-      title: "Administrative Documentation",
+      title: "Sample Financial Reports",
+      image: "/highlights_sheet.jpg",
+      desc: "Anonymized, clean mock Profit & Loss (P&L) statements, Balance Sheets, and Accounts Receivable aging summaries showing accuracy and layout design.",
+      icon: (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <line x1="18" y1="20" x2="18" y2="10" />
+          <line x1="12" y1="20" x2="12" y2="4" />
+          <line x1="6" y1="20" x2="6" y2="14" />
+        </svg>
+      ),
+      tags: ["Profit & Loss (P&L)", "Balance Sheets", "Financial Reporting"]
+    },
+    {
+      num: "02",
+      title: "Bank Reconciliation Walkthrough",
+      image: "/highlights_workflow.jpg",
+      desc: "A step-by-step mock case study showing reconciliation of bank statements with general ledger accounts to verify transactions and clear discrepancies.",
+      icon: (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+          <line x1="16" y1="2" x2="16" y2="6" />
+          <line x1="8" y1="2" x2="8" y2="6" />
+          <line x1="3" y1="10" x2="21" y2="10" />
+        </svg>
+      ),
+      tags: ["Bank Reconciliation", "Ledger Matching", "Discrepancy Cleanup"]
+    },
+    {
+      num: "03",
+      title: "Invoice & Expense Tracking",
       image: "/highlights_doc.jpg",
-      desc: "Preparing, organizing, and maintaining documents and student records with accuracy and confidentiality.",
+      desc: "A customized spreadsheet template and workflow designed for tracking vendor bills, client invoicing, and recording expenses by categories.",
       icon: (
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
           <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
@@ -922,36 +940,7 @@ function HighlightsSection() {
           <path d="M16 17H8" />
         </svg>
       ),
-      tags: ["Document Preparation", "Record Keeping", "File Organization"]
-    },
-    {
-      num: "02",
-      title: "Financial Spreadsheet",
-      image: "/highlights_sheet.jpg",
-      desc: "Using Excel to encode data, perform calculations, track expenses, and generate reports for better financial monitoring.",
-      icon: (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <line x1="18" y1="20" x2="18" y2="10" />
-          <line x1="12" y1="20" x2="12" y2="4" />
-          <line x1="6" y1="20" x2="6" y2="14" />
-        </svg>
-      ),
-      tags: ["Data Encoding", "Calculations", "Reporting"]
-    },
-    {
-      num: "03",
-      title: "Office Workflow & Coordination",
-      image: "/highlights_workflow.jpg",
-      desc: "Coordinating schedules, managing tasks, and supporting smooth daily operations across the office.",
-      icon: (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-          <line x1="16" y1="2" x2="16" y2="6" />
-          <line x1="8" y1="2" x2="8" y2="6" />
-          <line x1="3" y1="10" x2="21" y2="10" />
-        </svg>
-      ),
-      tags: ["Scheduling", "Task Coordination", "Follow-Up"]
+      tags: ["Vendor Bills", "Client Invoices", "Expense Categories"]
     }
   ];
 
@@ -1070,276 +1059,122 @@ function HighlightsSection() {
   );
 }
 
-// ============================================================
-// CERTIFICATES SECTION — commented out until real certs exist.
-// To restore: remove the leading '//' from each line below.
-// ============================================================
-// /* ============================================================
-//    CERTIFICATES SECTION — commented out until real certs exist
-//    Uncomment the entire block below when ready.
-//    ============================================================
-// function CertificatesSection() {
-//   const [activeTab, setActiveTab] = useState("all");
-//
-//   const categories = [
-//     { id: "all", name: "All Certificates", icon: <Users className="w-4 h-4" /> },
-//     { id: "administrative", name: "Administrative", icon: <Briefcase className="w-4 h-4" /> },
-//     { id: "finance", name: "Finance & Accounting", icon: <Calculator className="w-4 h-4" /> },
-//     { id: "digital", name: "Digital & Productivity", icon: <Monitor className="w-4 h-4" /> },
-//   ];
-//
-//   const certs = [
-//     {
-//       title: "Excel Essentials",
-//       issuer: "Microsoft",
-//       date: "May 2025",
-//       category: "digital",
-//       logo: "Microsoft",
-//       logoColor: "text-[#2F7037]",
-//       type: "microsoft"
-//     },
-//     {
-//       title: "Financial Accounting Basics",
-//       issuer: "Great Learning",
-//       date: "March 2025",
-//       category: "finance",
-//       logo: "Great Learning",
-//       logoColor: "text-[#005691]",
-//       type: "greatlearning"
-//     },
-//     {
-//       title: "Google Workspace Fundamentals",
-//       issuer: "Google",
-//       date: "January 2025",
-//       category: "digital",
-//       logo: "Google",
-//       logoColor: "text-[#4285F4]",
-//       type: "google"
-//     },
-//     {
-//       title: "Canva for Work",
-//       issuer: "Canva",
-//       date: "January 2025",
-//       category: "digital",
-//       logo: "Canva",
-//       logoColor: "text-[#00C4CC]",
-//       type: "canva"
-//     },
-//     {
-//       title: "Customer Service Excellence",
-//       issuer: "Coursera",
-//       date: "December 2024",
-//       category: "administrative",
-//       logo: "Coursera",
-//       logoColor: "text-[#0056D2]",
-//       type: "coursera"
-//     },
-//     {
-//       title: "Office Administration and Management",
-//       issuer: "ATC Training Center",
-//       date: "November 2024",
-//       category: "administrative",
-//       logo: "ATC Training Center",
-//       logoColor: "text-[#A8201A]",
-//       type: "atc"
-//     }
-//   ];
-//
-//   const filteredCerts = activeTab === "all" ? certs : certs.filter(c => c.category === activeTab);
-//
-//   return (
-//     <section id="certificates" className="py-32 px-6 lg:px-10 xl:px-16 max-w-[1800px] mx-auto relative overflow-hidden">
-//       {/* Background floral assets */}
-//       {/* eslint-disable-next-line @next/next/no-img-element */}
-//       <img src="/floral_branch.jpg" alt="floral decoration" className="absolute -left-20 top-[30%] w-[380px] opacity-15 mix-blend-multiply pointer-events-none transform rotate-12 z-0" />
-//       {/* eslint-disable-next-line @next/next/no-img-element */}
-//       <img src="/floral_branch.jpg" alt="floral decoration" className="absolute -right-20 top-[60%] w-[420px] opacity-20 mix-blend-multiply pointer-events-none transform scale-x-[-1] -rotate-12 z-0" />
-//
-//       {/* Top Header Part */}
-//       <div className="w-full flex flex-col lg:flex-row justify-between items-center lg:items-start gap-12 lg:gap-20 mb-20 relative z-10">
-//         {/* Left Side Header */}
-//         <div className="w-full lg:w-[50%] flex flex-col space-y-6">
-//           <div className="flex items-center gap-4">
-//             <span className="uppercase tracking-[0.2em] text-gold text-sm font-semibold">PROFESSIONAL DEVELOPMENT</span>
-//             <div className="h-[1px] w-48 bg-gold/50" />
-//           </div>
-//           <h2 className="text-4xl lg:text-5xl xl:text-6xl font-serif text-foreground leading-[1.15]">
-//             Investing in continuous learning to grow, improve, and deliver reliable support.
-//           </h2>
-//           <p className="text-foreground/70 max-w-xl leading-[1.8] text-[17px]">
-//             I continuously develop my knowledge and skills through relevant training and certifications.
-//           </p>
-//         </div>
-//
-//         {/* Right Side learning journey card */}
-//         <div className="w-full lg:w-[45%]">
-//           <div className="bg-[#FAF7F2] border border-gold/30 rounded-[2rem] p-8 lg:p-10 shadow-sm space-y-6">
-//             <div className="flex items-center gap-4">
-//               <div className="w-10 h-10 rounded-full border border-gold/40 flex items-center justify-center text-gold bg-white">
-//                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-//                   <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
-//                   <path d="M12 6v6l4 2" />
-//                 </svg>
-//               </div>
-//               <div>
-//                 <h3 className="text-xl font-serif text-foreground">My Learning Journey</h3>
-//                 <div className="h-[1px] w-24 bg-gold/30 mt-1" />
-//               </div>
-//             </div>
-//
-//             <ul className="space-y-4 text-[15px]">
-//               <li className="flex items-center gap-3 text-foreground/80">
-//                 <CheckCircle className="w-5 h-5 text-[#2F7037] shrink-0" />
-//                 <span>Administrative Excellence</span>
-//               </li>
-//               <li className="flex items-center gap-3 text-foreground/80">
-//                 <CheckCircle className="w-5 h-5 text-[#2F7037] shrink-0" />
-//                 <span>Financial Management</span>
-//               </li>
-//               <li className="flex items-center gap-3 text-gold font-medium">
-//                 <div className="w-5 h-5 rounded-full border border-gold flex items-center justify-center shrink-0">
-//                   <ArrowRight className="w-3 h-3 text-gold" strokeWidth={2.5} />
-//                 </div>
-//                 <span>Bookkeeping (In Progress)</span>
-//               </li>
-//             </ul>
-//
-//             <div className="border-t border-gold/25 pt-6">
-//               <h4 className="text-[12px] font-bold tracking-[0.15em] text-[#8C6D3E] uppercase mb-4">Future Certifications I&apos;m Working Towards</h4>
-//               <ul className="space-y-2 text-[14px] text-foreground/70 list-disc pl-5 marker:text-gold">
-//                 <li>NC II Bookkeeping</li>
-//                 <li>QuickBooks Online</li>
-//                 <li>Xero Advisor Certification</li>
-//               </ul>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//
-//       {/* Filter Tabs */}
-//       <div className="flex flex-wrap justify-center gap-4 mb-16 relative z-10">
-//         {categories.map((tab) => (
-//           <button
-//             key={tab.id}
-//             onClick={() => setActiveTab(tab.id)}
-//             className={`flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium transition-all ${
-//               activeTab === tab.id
-//                 ? "bg-[#4E5645] text-white shadow-md"
-//                 : "bg-white text-foreground/70 border border-gold/20 hover:border-gold/50"
-//             }`}
-//           >
-//             {tab.icon}
-//             {tab.name}
-//           </button>
-//         ))}
-//       </div>
-//
-//       {/* Certificates Grid */}
-//       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-8 relative z-10 max-w-[1500px] mx-auto mb-20">
-//         {filteredCerts.map((cert, idx) => (
-//           <div key={idx} className="bg-white border border-gold/25 rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col h-full group">
-//             {/* HTML Certificate Thumbnail */}
-//             <div className="relative w-full aspect-[1.4/1] bg-[#FAF8F5] border-b border-gold/20 p-6 flex flex-col justify-between overflow-hidden select-none group-hover:bg-[#FDFCFB] transition-colors shadow-inner">
-//               <div className="absolute inset-3 border border-[#E6DCCF]/50 pointer-events-none" />
-//
-//               {/* Top Row: Logo */}
-//               <div className="flex justify-between items-center z-10">
-//                 <span className={`text-[10px] font-extrabold tracking-wider ${cert.logoColor} uppercase`}>{cert.logo}</span>
-//                 {cert.type === "google" && (
-//                   <div className="w-8 h-8 rounded-full bg-[#4285F4]/10 border border-[#4285F4]/30 flex items-center justify-center">
-//                     <span className="text-[8px] font-bold text-[#4285F4]">G</span>
-//                   </div>
-//                 )}
-//                 {cert.type === "microsoft" && (
-//                   <div className="w-8 h-8 bg-[#2F7037]/10 border border-[#2F7037]/30 flex items-center justify-center">
-//                     <span className="text-[8px] font-bold text-[#2F7037]">MS</span>
-//                   </div>
-//                 )}
-//               </div>
-//
-//               {/* Certificate content text */}
-//               <div className="text-center z-10 my-auto flex flex-col items-center py-2">
-//                 <p className="text-[7px] tracking-[0.25em] uppercase text-foreground/40 font-bold mb-1.5">Certificate of Completion</p>
-//                 <h4 className="text-xl signature text-gold mb-1">Jessa Mae Condrillon</h4>
-//                 <div className="h-[0.5px] w-24 bg-gold/20 mb-2" />
-//                 <p className="text-[12px] font-serif text-foreground font-semibold leading-tight max-w-[85%] text-center">
-//                   {cert.title}
-//                 </p>
-//               </div>
-//
-//               {/* Footer row */}
-//               <div className="flex justify-between items-end z-10 pt-2">
-//                 <div className="text-left">
-//                   <p className="text-[6px] uppercase tracking-[0.15em] text-foreground/40 font-semibold">Verified Credential</p>
-//                   <p className="text-[9px] font-serif font-bold text-foreground/75">{cert.issuer}</p>
-//                 </div>
-//                 {/* Gold Seal */}
-//                 <div className="w-8 h-8 rounded-full bg-gold/5 border border-gold/40 flex items-center justify-center shrink-0">
-//                   <div className="w-6 h-6 rounded-full border border-dashed border-gold/30" />
-//                 </div>
-//               </div>
-//             </div>
-//
-//             {/* Card Info Details */}
-//             <div className="p-8 flex-1 flex flex-col justify-between">
-//               <div>
-//                 <h3 className="text-xl font-serif text-foreground leading-snug mb-2">{cert.title}</h3>
-//                 <p className="text-[14px] text-foreground/60 mb-4">{cert.issuer}</p>
-//               </div>
-//
-//               <div className="flex items-center justify-between border-t border-gold/15 pt-6 mt-4">
-//                 <div className="flex items-center gap-2 text-foreground/50 text-[13px]">
-//                   <Calendar className="w-4 h-4 text-gold" />
-//                   <span>Issued: {cert.date}</span>
-//                 </div>
-//                 <a href="#" className="flex items-center gap-1.5 text-[13px] text-gold hover:text-[#8C6D3E] font-medium transition-colors">
-//                   View Credential
-//                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-//                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-//                     <polyline points="15 3 21 3 21 9" />
-//                     <line x1="10" y1="14" x2="21" y2="3" />
-//                   </svg>
-//                 </a>
-//               </div>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-//
-//       {/* Bottom Banner */}
-//       <div className="max-w-[1300px] mx-auto relative z-10">
-//         <div className="w-full bg-[#FAF7F2] border border-gold/30 rounded-[2rem] py-6 px-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
-//           <div className="flex items-center gap-6 text-left flex-1">
-//             <div className="w-14 h-14 rounded-full border border-gold/30 flex items-center justify-center text-gold shrink-0 bg-white">
-//               <span className="font-serif text-3xl leading-none -mt-2">&ldquo;</span>
-//             </div>
-//             <p className="text-[16px] lg:text-[17px] text-foreground/80 leading-relaxed max-w-xl">
-//               I believe continuous learning is essential to delivering <br className="hidden lg:inline" />
-//               accurate, efficient, and professional support every day.
-//             </p>
-//           </div>
-//
-//           <div className="hidden md:block h-14 w-[1px] bg-gold/20" />
-//
-//           <div className="flex items-center gap-4 shrink-0">
-//             <span className="text-2xl lg:text-3xl signature text-gold whitespace-nowrap">
-//               Always Learning. Always Growing.
-//             </span>
-//             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="text-gold hidden lg:block opacity-80">
-//               <path d="M2 22C12 22 17 12 17 2" />
-//               <path d="M9 14c1.5-1 3-3 3-5" />
-//               <path d="M6 17c1.5-1 2.5-3 2.5-4.5" />
-//               <path d="M12 11c1.5-1 2.5-2.5 2.5-4" />
-//               <path d="M15 8c1.5-1 2-2 2-3" />
-//             </svg>
-//           </div>
-//         </div>
-//       </div>
-//
-//     </section>
-//   );
-// }
-// ============================================================
+function CertificatesSection() {
+  return (
+    <section id="certificates" className="py-32 px-6 lg:px-10 xl:px-16 max-w-[1800px] mx-auto relative overflow-hidden">
+      {/* Background floral assets */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/floral_branch.jpg" alt="floral decoration" className="absolute -left-20 top-[30%] w-[380px] opacity-15 mix-blend-multiply pointer-events-none transform rotate-12 z-0" />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/floral_branch.jpg" alt="floral decoration" className="absolute -right-20 top-[60%] w-[420px] opacity-20 mix-blend-multiply pointer-events-none transform scale-x-[-1] -rotate-12 z-0" />
+
+      {/* Main Grid Layout */}
+      <div className="w-full grid lg:grid-cols-12 gap-16 relative z-10">
+        
+        {/* Left Side: Header & Certificate Image */}
+        <div className="lg:col-span-7 flex flex-col space-y-8">
+          <div className="flex flex-col space-y-6">
+            <div className="flex items-center gap-4">
+              <span className="uppercase tracking-[0.2em] text-gold text-sm font-semibold">PROFESSIONAL CERTIFICATION</span>
+              <div className="h-[1px] w-48 bg-gold/50" />
+            </div>
+            <h2 className="text-4xl lg:text-5xl xl:text-6xl font-serif text-foreground leading-[1.15]">
+              National Certificate in Bookkeeping
+            </h2>
+            <p className="text-foreground/70 max-w-xl leading-[1.8] text-[17px]">
+              I am officially certified by the Technical Education and Skills Development Authority (TESDA) in Bookkeeping NC III, validating my competence in performing key bookkeeping and basic accounting functions.
+            </p>
+          </div>
+
+          {/* Certificate Frame */}
+          <div className="bg-white border border-gold/30 rounded-[2rem] p-6 shadow-sm max-w-2xl group relative overflow-hidden">
+            <div className="relative aspect-[1.414/1] w-full bg-[#FAF8F5] rounded-xl overflow-hidden border border-gold/15 flex items-center justify-center p-2">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img 
+                src="/book-keeping-cert-tesda.png" 
+                alt="Bookkeeping NC III Certificate - TESDA" 
+                className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.02]" 
+              />
+            </div>
+            <div className="mt-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-t border-gold/15 pt-6">
+              <div>
+                <h3 className="text-xl font-serif text-foreground">Bookkeeping NC III Certificate</h3>
+                <p className="text-sm text-foreground/60">Issued by TESDA (Technical Education and Skills Development Authority)</p>
+              </div>
+              <a 
+                href="/book-keeping-cert-tesda.png" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-flex items-center gap-2 text-sm text-gold hover:text-[#8C6D3E] font-medium transition-colors border border-gold/40 hover:border-gold px-4 py-2 rounded-full"
+              >
+                View Full Size
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Side: Learning Journey & Roadmap */}
+        <div className="lg:col-span-5 flex flex-col justify-start">
+          <div className="bg-[#FAF7F2] border border-gold/30 rounded-[2.5rem] p-8 lg:p-10 shadow-sm space-y-8 sticky top-28">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center text-gold bg-white shrink-0">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+                  <path d="M12 6v6l4 2" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-2xl font-serif text-foreground">My Professional Roadmap</h3>
+                <div className="h-[1px] w-28 bg-gold/30 mt-1" />
+              </div>
+            </div>
+
+            <ul className="space-y-5 text-[16px]">
+              <li className="flex items-start gap-3.5 text-foreground/80">
+                <CheckCircle className="w-6 h-6 text-[#2F7037] shrink-0 mt-0.5" />
+                <div>
+                  <span className="font-semibold block text-slate-900">TESDA Bookkeeping NC III</span>
+                  <span className="text-sm text-foreground/60">Completed and Certified</span>
+                </div>
+              </li>
+              <li className="flex items-start gap-3.5 text-foreground/80">
+                <CheckCircle className="w-6 h-6 text-[#2F7037] shrink-0 mt-0.5" />
+                <div>
+                  <span className="font-semibold block text-slate-900">Financial Management Foundation</span>
+                  <span className="text-sm text-foreground/60">Bachelor&apos;s Degree in Business Administration</span>
+                </div>
+              </li>
+              <li className="flex items-start gap-3.5 text-gold font-medium">
+                <div className="w-6 h-6 rounded-full border border-gold flex items-center justify-center shrink-0 mt-0.5">
+                  <ArrowRight className="w-3.5 h-3.5 text-gold animate-pulse" strokeWidth={2.5} />
+                </div>
+                <div>
+                  <span className="font-semibold block text-slate-950">Xero & QuickBooks Online</span>
+                  <span className="text-sm text-gold/80">Continuous workflow mastery</span>
+                </div>
+              </li>
+            </ul>
+
+            <div className="border-t border-gold/25 pt-6">
+              <h4 className="text-[12px] font-bold tracking-[0.15em] text-[#8C6D3E] uppercase mb-4">Continuous Learning Roadmap</h4>
+              <ul className="space-y-3 text-[14px] text-foreground/75 list-disc pl-5 marker:text-gold">
+                <li>Xero Advisor Certification</li>
+                <li>QuickBooks Online ProAdvisor</li>
+                <li>Advanced financial spreadsheets & payroll processing</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  );
+}
 
 function ProcessSection() {
   const stepsRow1 = [
@@ -1539,27 +1374,27 @@ function FaqSection() {
   const faqs = [
     {
       q: "Are you available for remote work?",
-      a: "Yes, I am open to remote, hybrid, and on-site opportunities depending on the role and employer's requirements."
+      a: "Yes, I am open to remote, hybrid, and on-site bookkeeping roles depending on your team's requirements."
     },
     {
       q: "What type of work do you specialize in?",
-      a: "I specialize in administrative support, document processing, student record assistance, financial tasks (including payroll assistance, cashiering support), and general office communication."
+      a: "I specialize in virtual bookkeeping, bank reconciliation, ledger clean-up, invoice and expense tracking, and financial administration for small businesses and professionals."
     },
     {
       q: "Do you have experience in bookkeeping?",
-      a: "Yes, I have practical experience in cashiering support and payroll assistance. I am also currently working towards my NC II Bookkeeping and Xero Advisor certifications."
+      a: "Yes, I have a Bachelor of Science in Business Administration major in Financial Management, 4 years of experience as a Student Assistant at Cor Jesu College with exposure to cashiering and payroll, and a Bookkeeping NC III certification from TESDA."
     },
     {
       q: "What tools and software are you comfortable using?",
-      a: "I am highly comfortable with Microsoft Excel, Microsoft Word, Google Workspace, Gmail, Canva, and Xero."
+      a: "I am highly comfortable with Xero, QuickBooks Online, Microsoft Excel, Google Sheets, Google Workspace, and communication tools like Slack and Zoom."
     },
     {
       q: "Are you open to full-time or part-time positions?",
-      a: "Yes, I am open to both full-time and part-time positions where I can provide administrative and financial value."
+      a: "Yes, I am open to both full-time and part-time positions where I can provide bookkeeping and financial administration value."
     },
     {
       q: "What makes you different from other candidates?",
-      a: "My combination of a Bachelor's degree in Business Administration major in Financial Management, 4 years of hands-on student assistant experience at Cor Jesu College, and high attention to detail and confidentiality."
+      a: "My combination of a Bachelor's degree in Business Administration major in Financial Management, 4 years of hands-on student assistant experience, a TESDA Bookkeeping NC III certification, and absolute attention to detail and confidentiality."
     },
     {
       q: "How do you ensure confidentiality and data security?",
@@ -1858,7 +1693,7 @@ export default function Home() {
         <SkillsSection />
         <ToolsSection />
         <HighlightsSection />
-        {/* <CertificatesSection /> */} {/* TEMP: commented out — no real certs yet */}
+        <CertificatesSection />
         <QuoteSection />
         <ProcessSection />
         <FaqSection />
