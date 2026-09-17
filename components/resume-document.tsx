@@ -44,12 +44,12 @@ export function ResumeDocument({ pdf = false }: { pdf?: boolean }) {
       </h2>
       <div className="h-[1px] w-full bg-[#00c4cc] mt-1 mb-2.5" />
       <p className="text-[11.5px] leading-relaxed text-black text-justify">
-        Customer Service and Administration professional with 4 years of experience as a Student Assistant in the 
-        Assessment Office of Cor Jesu College. Specializes in managing customer inquiries, email ticketing, and office 
-        correspondence with speed, accuracy, and empathy. Backed by a BSBA degree in Financial Management, a TESDA 
-        Bookkeeping NC III certification, and advanced spreadsheet skills (database cleanup, formatting, Excel formulas). 
-        Proven track record of resolving customer concerns while maintaining precise bookkeeping, tracking expenses, and 
-        ensuring absolute data confidentiality.
+        Detail-oriented Business Administration graduate major in Financial Management and certified Bookkeeper with 
+        4 years of hands-on experience supporting administrative and financial workflows in the Assessment Office 
+        of Cor Jesu College. Specializes in virtual bookkeeping, bank reconciliation, ledger management, data cleaning, 
+        and invoice/expense tracking. Backed by a strong background in Financial Management, a TESDA Bookkeeping NC III 
+        certification, and advanced Excel skills. Also proficient in administrative coordination, inbox organization, 
+        and virtual customer care.
       </p>
     </section>
   );
@@ -62,12 +62,13 @@ export function ResumeDocument({ pdf = false }: { pdf?: boolean }) {
       <div className="h-[1px] w-full bg-[#00c4cc] mt-1 mb-2.5" />
       <p className="text-[11px] leading-relaxed text-black">
         {[
-          "Customer Service & Care", "Email & Chat Support", "Zendesk Ticketing", "Mock Ticket Scenarios",
-          "CSAT & SLA Monitoring", "Data Entry & Database Cleanup", "Microsoft Excel (Pivot Tables, XLOOKUP)",
-          "Google Sheets", "Virtual Bookkeeping", "Bank & Cash Reconciliation", "Invoice Processing",
-          "Accounts Payable/Receivable", "SOP & Process Documentation", "Inbox & Calendar Management",
-          "Confidential Record Handling", "Active Listening & Empathy", "Time Management & Deadlines",
-          "Office Coordination", "Clear Professional Communication"
+          "Virtual Bookkeeping", "General Ledger Management", "Accounts Payable (A/P)",
+          "Accounts Receivable (A/R)", "Bank & Cash Reconciliation", "Data Cleaning & Entry",
+          "Invoice & Billing Processing", "Expense Tracking & Mapping", "Financial Documentation",
+          "Microsoft Excel (VLOOKUP, XLOOKUP, Pivot Tables)", "Google Sheets", "Xero (Xero Advisor)",
+          "QuickBooks Online", "SOP Development", "Inbox & Calendar Management",
+          "Time Management", "Accuracy & Detail Focus", "Confidential Record Handling",
+          "Administrative Office Support", "Customer Service & Communication"
         ].join(" | ")}
       </p>
     </section>
@@ -86,25 +87,25 @@ export function ResumeDocument({ pdf = false }: { pdf?: boolean }) {
         
         <ul className="list-disc pl-5 mt-2 space-y-1.5 text-[11px] leading-relaxed text-black">
           <li>
-            Provided direct front-line support to students, faculty, and visitors, resolving inquiries patiently, professionally, and clearly.
+            Supported assessment office operations, helping manage daily administrative tasks and bookkeeping-related workflows.
           </li>
           <li>
-            Managed and organized the office email inbox, systematically labeling, filtering, and responding to incoming inquiries.
+            Assisted with cashiering support, recording payments, and performing daily transaction reconciliations with high accuracy.
           </li>
           <li>
-            Performed high-volume data entry and cleaned up messy database spreadsheets using advanced Excel/Sheets formulas.
+            Gained payroll-related exposure by organizing office timesheets, compiling reports, and verifying working hours.
           </li>
           <li>
-            Documented Standard Operating Procedures (SOPs) for student record archiving and administrative workflows.
+            Performed accurate data entry and cleaned up tracking spreadsheets using Microsoft Excel and Google Sheets.
           </li>
           <li>
-            Assisted with cashiering support, recording daily transactions, and reconciling cash collections.
+            Managed student records and document processing, handling highly confidential academic and financial information securely.
           </li>
           <li>
-            Gained exposure to payroll-related workflows by compiling timesheets and verifying working hours.
+            Communicated with students, faculty, and office visitors to resolve inquiries with patience, professionalism, and clarity.
           </li>
           <li>
-            Maintained physical and digital filing systems for sensitive records under strict privacy protocols.
+            Ensured absolute accuracy, privacy compliance, and strict attention to detail in all document verification tasks.
           </li>
         </ul>
       </div>
@@ -123,10 +124,10 @@ export function ResumeDocument({ pdf = false }: { pdf?: boolean }) {
         <tbody>
           <tr className="border-b border-slate-300">
             <td className="w-[180px] p-2 border-r border-slate-300 font-bold bg-slate-50/20 align-top">
-              Customer Service
+              Accounting & Finance
             </td>
             <td className="p-2 align-top">
-              Zendesk, Freshdesk, customer support, email queue management, ticketing systems, CSAT and SLA monitoring, response templates (macros)
+              Xero (Xero Advisor), QuickBooks Online, Microsoft Excel, Google Sheets, Bank Reconciliation, General Ledger, Accounts Payable (A/P), Accounts Receivable (A/R), Invoicing, Expense Tracking, Basic Payroll Documentation
             </td>
           </tr>
           <tr className="border-b border-slate-300">
@@ -164,10 +165,10 @@ export function ResumeDocument({ pdf = false }: { pdf?: boolean }) {
           </tr>
           <tr className="border-b border-slate-300">
             <td className="w-[180px] p-2 border-r border-slate-300 font-bold bg-slate-50/20 align-top">
-              Accounting & Finance
+              Customer Service
             </td>
             <td className="p-2 align-top">
-              Xero (Xero Advisor), QuickBooks Online, Microsoft Excel, Google Sheets, Bank Reconciliation, General Ledger, Accounts Payable (A/P), Accounts Receivable (A/R), Invoicing, Expense Tracking, Basic Payroll Documentation
+              Zendesk, Freshdesk, email management tools, customer support, ticketing systems, SLA and CSAT tracking awareness
             </td>
           </tr>
           <tr className="border-b border-slate-300">
@@ -183,7 +184,7 @@ export function ResumeDocument({ pdf = false }: { pdf?: boolean }) {
               Administrative & SOPs
             </td>
             <td className="p-2 align-top">
-              Standard Operating Procedures (SOPs) development, database data entry & clean-up, filing and records management, spreadsheet calculations
+              Standard Operating Procedures (SOPs) development, database clean-up, filing and records management, spreadsheet calculations
             </td>
           </tr>
         </tbody>

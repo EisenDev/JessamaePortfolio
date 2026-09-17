@@ -1,50 +1,102 @@
 @import "tailwindcss";
 
-@theme {
-  --color-background: #F8F5EF;
-  --color-foreground: #3E4339;
-  --color-gold: #B39B78;
-  --color-gold-light: #DCD0C0;
-  --color-dark: #1B1E18;
-  --color-btn: #4D5246;
+@variant dark (&:where(.dark, .dark *));
 
-  --font-sans: var(--font-inter);
-  --font-serif: var(--font-playfair);
-  --font-signature: var(--font-alex);
-  --font-montserrat: var(--font-montserrat);
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
 }
 
 :root {
-  background-color: var(--color-background);
-  color: var(--color-foreground);
+  /* Premium Champagne Palette */
+  --background: #F6F3ED;
+  --surface: #FBFAF7;
+  --surface-elevated: #EEEAE2;
+  --foreground: #111111;
+  --muted: #6F6A62;
+  --border: #DDD7CE;
+  --accent: #A68A64; /* Muted Gold */
+  --ring: #A68A64;
 }
 
-body {
-  font-family: var(--font-sans), sans-serif;
-  background-color: var(--color-background);
-  color: var(--color-foreground);
-  overflow-x: hidden;
+.dark {
+  /* Deep Obsidian Palette */
+  --background: #0D0D0C;
+  --surface: #151514;
+  --surface-elevated: #1E1D1A;
+  --foreground: #F5F2EA;
+  --muted: #B8B1A5;
+  --border: #2C2A26;
+  --accent: #C2A66D;
+  --ring: #C2A66D;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-serif), serif;
+@layer base {
+  * {
+    @apply border-border outline-ring/30;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    
+    *, ::before, ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased relative;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11", "ss01";
+    letter-spacing: -0.01em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight font-bold;
+  }
+
+  ::selection {
+    @apply bg-accent/20 text-foreground;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent/60;
+  }
 }
 
-.font-signature {
-  font-family: var(--font-signature), cursive;
-}
+@layer utilities {
+  .glass-panel {
+    @apply bg-surface/75 backdrop-blur-md border border-border/50 shadow-sm;
+  }
+  
+  .editorial-shadow {
+    @apply shadow-[0_8px_30px_rgb(0,0,0,0.04)];
+  }
 
-.signature {
-  font-family: var(--font-signature), cursive;
-}
+  .dark .editorial-shadow {
+    @apply shadow-[0_8px_30px_rgb(0,0,0,0.2)];
+  }
 
-/* Ensure icons have colors */
-svg.text-gold {
-  color: var(--color-gold);
+  .text-balance {
+    text-wrap: balance;
+  }
 }
-svg.fill-current {
-  fill: currentColor;
-}
-
-/* Botanical shapes using absolute positioning in components is better, 
-   but let's keep some subtle background gradients here if needed */
